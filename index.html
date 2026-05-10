@@ -26,28 +26,34 @@
 
 <body class=".noto-sans-p">
   <!-- Navbar-->
-  <nav class="navbar sticky-top bg-dark-subtle">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">
-        Inês Sérgio
-      </a>
+  <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
+    <div class="container">
+      <!-- Logótipo / Nome -->
+      <a class="navbar-brand fw-bold" href="index.html"> Inês Sérgio </a>
 
-      <ul class="nav nav-underline t-dec">
-        <li class=" nav nav-item t-dec">
-          <a class="nav-link active" style="text-decoration: none;" aria-current="page"
-            href="index.html">Início</a>
-        </li>
-        <li class="nav-item t-dec">
-          <a class="nav-link" style="text-decoration: none;" href="project_nabu.html">NABU</a>
-        </li>
-        <li class="nav-item t-dec">
-          <a class="nav-link" style="text-decoration: none;" href="project_f1track.html">F1TRACK</a>
-        </li>
-        <li class="nav-item t-dec">
-          <a class="nav-link"  style="text-decoration: none;" href="project_adplp.html">ADPLP</a>
-        </li>
-      </ul>
+      <!-- Menu Hambúrguer (visível apenas em mobile) -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
+      <!-- Links do Menu -->
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto nav-underline">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project_nabu.html">NABU</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project_f1track.html">F1TRACK</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="project_adplp.html">ADPLP</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </nav>
 
@@ -56,11 +62,12 @@
     <!--Main - sobre -->
     <div class="container mb-3">
       <div class="container text-center m-3">
-        <div class="row">
-          <div class="col-4">
-            <img src="Images/Progamador_Pics/me_.jpeg" class="w-50 profile_me" alt="Progamadora do portefólio">
+        <div class="row p-3">
+          <div class="col-12 col-lg-6">
+            <img src="Images/Progamador_Pics/me_.jpeg" class="img-fluid w-75 w-lg-50" alt="Progamadora do portefólio">
           </div>
-          <div class="col-8 text-start">
+          <div class="col-12 col-lg-6">
+            <br>
             <h5 class="separators">Sobre mim</h5>
             <p class="p-1">
               Sou progamadora de frontend e de backend. Tenho conhecimentos de Javascript, PHP, MySQL e integração de
@@ -69,106 +76,108 @@
               Estou a concluir a licenciatura de Multimédia e Tecnologias da Comunicação na Universidade de Aveiro, com
               especialização na área de Base de dados e Tecnologias avançadas para o client side.
             </p>
-            <h5 class="separators">Portefólios</h5>
-            <div class="row align-items-center">
-              <div class="col">
-                <a href="https://www.behance.net/inesser2005" class="btn btn_color" aria-current="page">
-                  <i class="bi bi-behance">Behance</i>
+            <h5 class="separators mt-4">Portefólios</h5>
+            <div class="row g-2 p-3 justify-content-center justify-content-lg-start">
+              <div class="col-12 col-sm-auto">
+                <a href="https://behance.net" class="btn btn_color w-100" aria-current="page">
+                  <i class="bi bi-behance"></i> Behance
                 </a>
               </div>
-              <div class="col">
-                <a href="https://www.linkedin.com/in/inesser2005/" class="btn btn_color"><i class="bi bi-linkedin">
-                    LinkedIn</i>
+              <div class="col-12 col-sm-auto">
+                <a href="https://linkedin.com" class="btn btn_color w-100">
+                  <i class="bi bi-linkedin"></i> LinkedIn
                 </a>
               </div>
-              <div class="col">
-                <a href="https://github.com/inesser2005" class="btn btn_color"><i class="bi bi-linkedin">
-                    GitHub</i>
+              <div class="col-12 col-sm-auto">
+                <a href="https://github.com" class="btn btn_color w-100">
+                  <i class="bi bi-github"></i> GitHub
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
 
-      <!--Education - Section for degrees and stuff -->
-      <div class="container mb-3">
-        <h5 class="separators">Educação</h5>
-
-        <div class="card mb-3 p-3 cards_bg" style="max-width: 540px;">
-          <div class="row g-0">
-            <div class="col-md-4">
-              <img src="Images/ualogo.png" class="img-fluid align-items-center rounded-start p-3" alt="...">
-            </div>
-            <div class="col-md-8">
-              <div class="card-body">
-                <h5 class="card-title">Licenciatura em Multimédia e Tecnologias da Comunicação</h5>
-                <p class="card-text"> Com especialização na área de Base de dados e Tecnologias avançadas para o
-                  client-side.</p>
-                <p class="card-text"><small class="text-body-secondary">2023-today</small></p>
-              </div>
-            </div>
           </div>
         </div>
 
       </div>
+    </div>
 
-      <!--Main - Projetos  e links diretos -->
+    <!--Education - Section for degrees-->
 
-      <div class="container mb-3">
-        <h5 class="separators">Projetos</h5>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100 cards_bg">
-              <span class="align-middle text-center p-3">
-                <img src="Images/Projetos_Logos/NABU_LOGO.png" class="card-img-top w-25 " alt="...">
-              </span>
-              <div class="card-body ">
-                <h5 class="card-title">NABU</h5>
-                <p class="card-text">
-                  Projeto criado para a CBL da UA, especialmente para a câmara de Lousã com o objetivo de suportar a
-                  enconomia local e dar continuidade ás trocas de comunidade com um toque mais moderno e acessível.
-                  Além disso aplicou-se os conhecimentos de PHP e MySQL bem como a elaboração da base de dados.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 cards_bg">
-              <span class="align-middle text-center p-3">
-                <img src="Images/Projetos_Logos/F1TRACKER_LOGO.png   " class="card-img-top" alt="...">
-              </span>
-              <div class="card-body">
-
-                <h5 class="card-title">F1TRACK</h5>
-
-                <p class="card-text">
-                  Projeto elaborado para a UC de TAC, onde se aplicou o React, Firebase e uso e
-                  cruzação de APIs.
-                  Como é um projeto que necessitava de diversa informação cruzada e relevante, o tema escolhido foi
-                  Fórmula 1.
-                </p>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100 cards_bg">
-              <img src="Images/Projetos_Logos/ADPLP_LOGO.png" class="card-img-top" style="max-width: 540px;" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">ADPLP</h5>
-                <p class="card-text">
-                  Projeto final de Licenciatura, em que se elaborou um website para esta associação e
-                  colocando todos os conhecimentos obtidos ao longo da licenciatura. Bem como criação de material para
-                  os mesmos na sua comunicação digital.
-                </p>
-                <p class="warn_users">
-                  Este projeto está de momento em desenvolvimento... ; &#41;
-                </p>
-              </div>
-            </div>
+    <div class="card mb-3 p-2 cards_bg mx-auto mx-md-0">
+      <div class="row g-0 align-items-center">
+        <div class="col-4 col-md-4">
+          <img src="Images/ualogo.png" class="img-fluid rounded-start p-2" alt="Logo UA">
+        </div>
+        <div class="col-8 col-md-8">
+          <div class="card-body p-2 p-md-3">
+            <h6 class="card-title fw-bold mb-1">Licenciatura em Multimédia e Tecnologias da Comunicação</h6>
+            <p class="card-text small mb-1">Especialização em Base de Dados e Tecnologias Client-side.</p>
+            <p class="card-text"><small class="text-body-secondary">2023 - presente</small></p>
           </div>
         </div>
-        <!--paceholder
+      </div>
+    </div>
+
+
+    <!--Main - Projetos  e links diretos -->
+
+    <div class="container mb-3">
+      <h5 class="separators">Projetos</h5>
+      <div class="row row-cols-1 row-cols-md-3 g-4">
+        <div class="col">
+          <div class="card h-100 cards_bg">
+            <span class="align-middle text-center p-3">
+              <img src="Images/Projetos_Logos/NABU_LOGO.png" class="card-img-top w-25 " alt="...">
+            </span>
+            <div class="card-body ">
+              <h5 class="card-title">NABU</h5>
+              <p class="card-text">
+                Projeto criado para a CBL da UA, especialmente para a câmara de Lousã com o objetivo de suportar a
+                enconomia local e dar continuidade ás trocas de comunidade com um toque mais moderno e acessível.
+                Além disso aplicou-se os conhecimentos de PHP e MySQL bem como a elaboração da base de dados.
+              </p>
+            </div>
+            <a href="project_nabu.html" class="btn btn_color">Detalhes do projeto</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 cards_bg">
+            <span class="align-middle text-center p-3">
+              <img src="Images/Projetos_Logos/F1TRACKER_LOGO.png   " class="card-img-top" alt="...">
+            </span>
+            <div class="card-body">
+
+              <h5 class="card-title">F1TRACK</h5>
+
+              <p class="card-text">
+                Projeto elaborado para a UC de TAC, onde se aplicou o React, Firebase e uso e
+                cruzação de APIs.
+                Como é um projeto que necessitava de diversa informação cruzada e relevante, o tema escolhido foi
+                Fórmula 1.
+              </p>
+            </div>
+            <a href="project_f1track.html" class="btn btn_color">Detalhes do projeto</a>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card h-100 cards_bg">
+            <img src="Images/Projetos_Logos/ADPLP_LOGO.png" class="card-img-top" style="max-width: 540px;" alt="...">
+            <div class="card-body">
+              <h5 class="card-title">ADPLP</h5>
+              <p class="card-text">
+                Projeto final de Licenciatura, em que se elaborou um website para esta associação e
+                colocando todos os conhecimentos obtidos ao longo da licenciatura. Bem como criação de material para
+                os mesmos na sua comunicação digital.
+              </p>
+              <p class="warn_users">
+                Este projeto está de momento em desenvolvimento... ; &#41;
+              </p>
+            </div>
+            <a href="project_adplp.html" class="btn btn_color">Detalhes do projeto</a>
+          </div>
+        </div>
+      </div>
+      <!--paceholder
 
     <div class="col">
       <div class="card h-100">
@@ -180,7 +189,7 @@
         </div>
       </div>
     </div>-->
-      </div>
+    </div>
 
   </main>
   <span class="p-3">

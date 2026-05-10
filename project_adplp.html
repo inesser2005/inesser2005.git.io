@@ -25,33 +25,37 @@
 </head>
 
 <body class=".noto-sans-p">
-
     <!-- Navbar-->
-    <nav class="navbar sticky-top bg-dark-subtle">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">
-                Inês Sérgio
-            </a>
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
+        <div class="container">
+            <!-- Logótipo / Nome -->
+            <a class="navbar-brand fw-bold" href="index.html"> Inês Sérgio </a>
 
-            <ul class="nav nav-underline t-dec">
-                <li class=" nav nav-item t-dec">
-                    <a class="nav-link active" style="text-decoration: none;" aria-current="page"
-                        href="index.html">Início</a>
-                </li>
-                <li class="nav-item t-dec">
-                    <a class="nav-link " style="text-decoration: none;" href="project_nabu.html">NABU</a>
-                </li>
-                <li class="nav-item t-dec">
-                    <a class="nav-link " style="text-decoration: none;" href="project_f1track.html">F1TRACK</a>
-                </li>
-                <li class="nav-item t-dec">
-                    <a class="nav-link"  style=" text-decoration: none;" href="project_adplp.html">ADPLP</a>
-                </li>
-            </ul>
+            <!-- Menu Hambúrguer (visível apenas em mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
+            <!-- Links do Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project_nabu.html">NABU</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project_f1track.html">F1TRACK</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="project_adplp.html">ADPLP</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-
     <main>
         <!--Main - Banner -->
         <div class="banner-container">
