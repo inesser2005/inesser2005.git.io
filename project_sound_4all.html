@@ -29,7 +29,9 @@
     <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
         <div class="container">
             <!-- Logótipo / Nome -->
-            <a class="navbar-brand fw-bold" href="index.html"> Inês Sérgio </a>
+            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html"> <span
+                    style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
+            </a>
 
             <!-- Menu Hambúrguer (visível apenas em mobile) -->
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -40,141 +42,129 @@
             <!-- Links do Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto nav-underline">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link active" href="index.html">Início</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_nabu.html">NABU</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_f1track.html">F1TRACK</a>
                     </li>
-                    <li class="nav-item">
+                    <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_adplp.html">ADPLP</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="project_sound_4all.html">Sound4all</a>
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link" aria-current="page" href="project_sound_4all.html">Sound4all</a>
                     </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill" href="contact.html">
+                            <i class="bi bi-envelope-at me-2"></i> Contacto
+                        </a>
+                    </li>
+
                 </ul>
             </div>
         </div>
     </nav>
-
-    <main>
-        <!--Main - Banner -->
-
-
-        <div class="banner-container">
-            <img src="Images/Banner/sound4all.jpg" alt="Banner" class="banner-image">
+    <main class="animar-entrada">
+        <!-- Banner de Identidade Visual -->
+        <div class="banner-container shadow">
+            <img src="Images/Banner/sound4all.jpg" alt="Sound4all Banner" class="banner-image">
         </div>
 
+        <div class="container my-5">
+            <div class="row g-5">
+                <!-- Coluna de Descrição e Galeria -->
+                <div class="col-lg-8 text-start">
+                    <h3 class="separators mb-4">Sound4all</h3>
 
+                    <p class="lead">Criação de marca e plataforma de e-commerce fictícia para áudio.</p>
+                    <p>
+                        Este projeto nasceu da vontade de explorar o meu estilo pessoal na criação de interfaces
+                        comerciais. O desafio foi criar uma identidade visual do zero e aplicá-la num website totalmente
+                        responsivo.
+                    </p>
+                    <p>
+                        <strong>Foco Multidevice:</strong> A aplicação foi pensada para garantir uma navegação fluida em
+                        ecrãs mobile e desktop, utilizando componentes personalizados do Bootstrap para manter a
+                        consistência da marca.
+                    </p>
 
-        <br>
-
-
-
-        <!--Main - Descrição do projeto -->
-        <div class="container text-center">
-            <h3 separators>Sound4all</h3>
-            <p class="text-start">
-                Este projeto foi criado para melhorar as mihas skills e perceber o meu estilo no que se toca na criação
-                de um website comercial.
-            </p>
-            <p class="text-start">
-                O design desta web-aplicação foi pensada para um formato responsivo, assegurando uma excelente
-                experiência tanto em diapositivos mobile ou desktop.
-                Criei uma marca fícitia e criei um design específico para a mesma.
-            </p>
-            <br>
-            <!--Linguagens de progamação e acesso ao projeto-->
-            <div>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-8">
-                            <div>
-                                <h5 class="text-start separators">Este projeto inclui estas linguagens de progamação:
-                                </h5>
-                                <br>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <button type="button" class="btn btn_color"><i
-                                            class="bi bi-filetype-html">HTML</i></button>
-                                    <button type="button" class="btn btn_color"><i class="bi bi-css">CSS</i></button>
-                                    <button type="button" class="btn btn_color"><i
-                                            class="bi bi-bootstrap">Bootstrap</i></button>
-                                    <button type="button" class="btn btn_color"><i
-                                            class="bi bi-javascript">Javascript</i></button>
-                                    <button type="button" class="btn btn_color"><i
-                                            class="bi bi-filetype-jsx">React</i></button>
-                                </div>
-                            </div>
+                    <!-- Galeria de Imagens (Substituir pelas imagens reais do Sound4all) -->
+                    <h5 class="separators mt-5 mb-4">Visualização do Design</h5>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <img src="Images/Projetos_Preview/Sound4all/Home.png"
+                                class="img-fluid rounded border shadow-sm preview-hover" alt="Homepage Sound4all">
                         </div>
-                        <div class="col-4">
-                            <div>
-                                <h5 class="text-start separators">Aceda ao projeto pelo link:</h5>
-                                <br>
-                                <button type="button" class="btn btn_color">
-                                    <a href="https://sound4all-github-io.vercel.app/">
-                                        F1TRACK
-                                    </a>
-                                </button>
-                            </div>
+                        <div class="col-md-6">
+                            <img src="Images/Projetos_Preview/Sound4all/Products.png"
+                                class="img-fluid rounded border shadow-sm preview-hover" alt="Página de Produtos">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="Images/Projetos_Preview/Sound4all/Cart.png"
+                                class="img-fluid rounded border shadow-sm preview-hover" alt="Carrinho de Compras">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="Images/Projetos_Preview/Sound4all/Mobile_view.png"
+                                class="img-fluid rounded border shadow-sm preview-hover" alt="Vista Mobile">
                         </div>
                     </div>
                 </div>
-            </div>
-            <br>
 
-            <!--Main - Imagens do projeto -->
-            <div>
-                <div class="container text-center">
-                    <div class="row">
-                        <div class="col-12">
-                            <h5 class="text-start separators">Imagens do projeto:</h5>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-6">
-                            <img src="Images/Projetos_Preview/F1TRACK/Homepage.png" alt="Banner"
-                                class="preview-image w-100 p-3">
-                        </div>
-                        <div class="col-6">
-                            <img src="Images/Projetos_Preview/F1TRACK/Drivers_page_Login.png" alt="Banner"
-                                class="preview-image w-100 p-3">
+                <!-- Coluna Lateral (Sidebar Técnica) -->
+                <div class="col-lg-4">
+                    <div class="p-4 rounded cards_bg sticky-top"
+                        style="top: 100px; border: 1px solid rgba(88,164,176,0.2);">
+                        <h5 class="separators">Linguagens & Ferramentas</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-info text-dark p-2">React.js</span>
+                            <span class="badge bg-info text-dark p-2">Javascript ES6</span>
+                            <span class="badge bg-info text-dark p-2">Bootstrap 5</span>
+                            <span class="badge bg-info text-dark p-2">CSS3 / SASS</span>
+                            <span class="badge bg-info text-dark p-2">HTML5</span>
                         </div>
 
-                        <div class="row">
-                            <div class="col-6">
-
-                                <img src="Images/Projetos_Preview/F1TRACK/Drrivers_page_no_login.png" alt="Banner"
-                                    class="preview-image w-100  p-3">
-                            </div>
-                            <div class="col-6">
-
-                                <img src="Images/Projetos_Preview/F1TRACK/Track_pages.png" alt="Banner"
-                                    class="preview-image w-100  p-3">
-                            </div>
-                        </div>
+                        <h5 class="separators">Explorar</h5>
+                        <!-- Link corrigido para o Sound4all -->
+                        <a href="https://sound4all-github-io.vercel.app/" target="_blank"
+                            class="btn btn_color w-100 py-3 fw-bold">
+                            <i class="bi bi-headphones me-2"></i> Visitar Website
+                        </a>
+                        <a href="index.html" class="btn btn-outline-light w-100 mt-2">
+                            <i class="bi bi-arrow-left"></i> Voltar ao Portefólio
+                        </a>
                     </div>
                 </div>
             </div>
-            <br>
         </div>
-        </div>
-        </div>
-
-        <br>
-
-
     </main>
 
     <!--Footer - redes sociais/portefólios + legal parts-->
-    <footer class="Footer_color">
-        <div class="container-fluid p-3">
-            <div class="row align-items-center text-center">
-                <p class="text-center"> © 2026 Inês Sérgio | Desenvolvido com HTML & CSS</p>
-                <div class="col">
+    <!-- Footer -->
+    <footer class="Footer_color mt-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-3">
+                <!-- Lado Esquerdo: Copyright -->
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <span class="small opacity-75">© 2026 <strong>Inês Sérgio</strong></span>
                 </div>
+
+                <!-- Centro: Mensagem Técnica -->
+                <div class="col-12 col-md-4 text-center">
+                    <span class="small opacity-75">Desenvolvido com HTML,
+                        CSS & Bootstrap</span>
+                </div>
+
+                <!-- Lado Direito: Links Rápidos ou Localização -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="small">
+                        <i class="bi bi-geo-alt-fill text-info"></i> Aveiro, Portugal
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
 
 

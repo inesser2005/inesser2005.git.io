@@ -1,68 +1,317 @@
-body .noto-sans-p {
-  font-family: "Noto Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-variation-settings: "wdth" 100;
+/* Tipografia */
+body {
+  font-family: "Signika", sans-serif;
+  font-weight: 300;
+  background-color: #0d1117;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
-.body {
-  font-family: '.noto-sans-p', Arial, Helvetica, sans-serif;
-  margin: auto;
+/*geral*/
+html {
+  scroll-behavior: smooth;
 }
 
 
-main .profile_me {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-
+.signika_letra {
+  font-family: "Signika", sans-serif;
 }
 
-.banner-container {
-  width: 100%;
-  max-height: 250px;
-  overflow: hidden;
+/* Navbar */
+.nav-link {
+  transition: color 0.3s ease;
 }
 
-.banner-image {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
-  object-position: center;
+.nav-underline .nav-link.active,
+.nav-underline .nav-link:hover {
+  color: #58a4b0 !important;
 }
 
-.preview-image {
-  max width: 250px;
-  height: :auto;
+.navbar {
+  backdrop-filter: blur(10px);
+  background-color: rgba(33, 37, 41, 0.9) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-main .nav_bg {
-  background-color: #093c5d;
+/* Footer */
+.Footer_color {
+  background-color: #093C5D;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  color: white;
 }
 
-main .cards_bg {
-  background-color: #093c5d;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  text-align: center;
+/*main*/
+main {
+  flex: 1;
 }
 
-main .separators {
-  font-weight: 600;
+/* Hero Section */
+.hero-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(9, 60, 93, 0.1) 0%, rgba(13, 17, 23, 1) 90%);
+  border-bottom: 1px solid rgba(88, 164, 176, 0.05);
 }
 
-main .btn_color {
-  text-decoration: none;
-  background-color: #093c5d;
+/* Efeito na foto de perfil */
+.profile-blob {
+  width: fit-content;
+  padding: 10px;
+  background: linear-gradient(45deg, #093c5d, #58a4b0);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  /* Forma orgânica moderna */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease;
 }
 
-main .btn_color:hover {
+.profile-blob:hover {
+  border-radius: 50%;
+  transform: rotate(2deg);
+}
+
+/*Habilidades*/
+#habilidades i {
+  color: #58a4b0 !important;
+  margin-bottom: 15px;
+}
+
+
+/*Estilo dos Cards */
+.cards_bg,
+.card-educacao,
+#habilidades .p-3 {
+  background-color: #093c5d !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  border-radius: 15px !important;
+  transition: all 0.3s ease-in-out;
+}
+
+.cards_bg:hover,
+.card-educacao:hover,
+#habilidades .p-3:hover {
+  transform: translateY(-8px);
+  border-color: #58a4b0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cards_bg:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+/* Ajuste para as imagens dos logos dentro dos cards */
+.card-img-top {
+  padding: 25px;
+  max-height: 120px;
+  object-fit: contain;
+}
+
+/* Card educação */
+.card-educacao {
+  background-color: #093c5d !important;
+  max-width: 500px;
+  border-radius: 10px;
+}
+
+.card-educacao img {
+  max-height: 80px;
+  object-fit: contain;
+}
+
+
+/* Ajuste aos logos dos projetos */
+.card span.align-middle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Garante que a imagem se ajusta sem distorcer */
+.card-img-top {
+  max-height: 200 px;
+  width: auto;
+  max-width: 90%;
+  object-fit: contain;
+}
+
+.cards_bg {
+  max-height: 450px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+}
+
+.cards_bg:hover {
+  transform: translateY(-10px);
+  border-color: #58a4b0 !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+/* Botões Personalizados */
+.btn_color {
+  background-color: #0d4a75;
+  color: white !important;
+  border: 2px white !important;
+  padding: 10px 20px;
+  transition: 0.3s;
+}
+
+.btn_color:hover {
   background-color: #58a4b0;
+  color: white !important;
 }
 
-main .warn_users {
+/* Estilo base para os botões de redes sociais */
+.btn-social {
+  background-color: #1b232d !important;
+  border: 1px solid #343a40 !important;
+  padding: 12px 24px !important;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.btn-social:hover {
+  color: white !important;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.btn-behance:hover {
+  background-color: #0057ff !important;
+  border-color: #0057ff !important;
+  transform: translateY(-3px);
+}
+
+.btn-linkedin:hover {
+  background-color: #0077b5 !important;
+  border-color: #0077b5 !important;
+  transform: translateY(-3px);
+}
+
+.btn-github:hover {
+  background-color: #333 !important;
+  border-color: #555 !important;
+  transform: translateY(-3px);
+}
+
+
+/* Títulos e Separadores */
+.separators {
+  font-weight: 700;
+  color: #58a4b0;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+/* Títulos Hero */
+.display-4 {
+  letter-spacing: -1px;
+}
+
+/* Alinha os Títulos */
+.card-title {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
   color: #58a4b0;
   font-weight: 600;
 }
 
-.Footer_color {
-  background-color: #093C5D;
+/* Alinha e limita o Texto */
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  /* Corta em 5 linhas com "..." */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+
+  flex-grow: 1;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+}
+
+/* Imagens */
+.profile_me {
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  max-width: 280px;
+}
+
+.banner-container {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  position: relative;
+}
+
+.banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: brightness(0.7);
+}
+
+/* Efeito de zoom suave nas imagens de preview */
+.preview-image {
+  max-height: 500px;
+  object-fit: contain;
+  background: #000;
+}
+
+.preview-hover {
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.preview-hover:hover {
+  transform: scale(1.02);
+  border-color: #58a4b0 !important;
+  cursor: pointer;
+}
+
+/* badges  */
+.badge {
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
+
+
+/* Animações*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* animação de entrada*/
+.animar-entrada {
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* delay para parecer mais invidual */
+.delay-1 {
+  animation-delay: 0.2s;
+  opacity: 0;
+}
+
+.delay-2 {
+  animation-delay: 0.4s;
+  opacity: 0;
+}
+
+.delay-3 {
+  animation-delay: 0.6s;
+  opacity: 0;
 }
