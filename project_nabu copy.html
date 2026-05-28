@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-pt" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inês Sérgio | Portefólio </title>
+
+    <!--Favicon-->
+    <link rel="icon" href="/Images/Projetos_Logos/favicon_io/favicon.png" type="image/x-icon">
+    <!--interactions-->
+    <script defer src="interactions.js"></script>
+    <!--styles-->
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!--Icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!--typografphy-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+
+</head>
+
+<body class=".noto-sans-p">
+    <!-- Navbar-->
+    <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
+        <div class="container">
+            <!-- Logótipo / Nome -->
+            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html"> <span
+                    style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
+            </a>
+
+            <!-- Menu Hambúrguer (visível apenas em mobile) -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links do Menu -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto nav-underline">
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link active" href="index.html">Início</a>
+                    </li>
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link" aria-current="page" href="project_nabu.html">NABU</a>
+                    </li>
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link" href="project_f1track.html">F1TRACK</a>
+                    </li>
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link" href="project_adplp.html">ADPLP</a>
+                    </li>
+                    <li class="nav-item px-lg-2">
+                        <a class="nav-link" href="project_sound_4all.html">Sound4all</a>
+                    </li>
+                    <li class="nav-item ms-lg-3">
+                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill" href="contact.html">
+                            <i class="bi bi-envelope-at me-2"></i> Contacto
+                        </a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!--Main -->
+
+        <main class="animar-entrada">
+            <!-- Banner Principal -->
+            <div class="banner-container shadow">
+                <img src="Images/Banner/nabu.jpg" alt="NABU Banner" class="banner-image">
+            </div>
+
+            <div class="container my-5">
+                <div class="row g-5">
+                    <!-- Coluna de Descrição e Imagens -->
+                    <div class="col-lg-8">
+                        <h3 class="separators mb-4">NABU</h3>
+                        <p class="lead">Solução digital para a economia circular na Lousã.</p>
+                        <p class="text-start">
+                            Este projeto foi elaborado para a CBL da UA, especialmente para a Câmara Municipal da Lousã,
+                            com o objetivo de suportar a economia local e dar continuidade às trocas de comunidade com
+                            um toque mais moderno e acessível.
+                        </p>
+                        <p class="text-start">
+                            <strong>Foco Mobile:</strong> O design desta web-aplicação foi pensado exclusivamente para
+                            dispositivos móveis, priorizando a usabilidade no terreno. A implementação de mecanismos de
+                            backend foi essencial para garantir uma experiência de troca fluida.
+                        </p>
+
+                        <!-- Galeria de Imagens -->
+                        <h5 class="separators mt-5 mb-4">Visualização do Design</h5>
+                        <div class="row g-3">
+                            <!-- Adicionado cursor:pointer, data-bs-toggle e data-bs-target em cada imagem -->
+                            <div class="col-md-6">
+                                <img src="Images/Projetos_Preview/SOUND4ALL/Home.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Homepage Sound4all"
+                                    style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="Images/Projetos_Preview/Sound4all/About.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover" alt="About"
+                                    style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="Images/Projetos_Preview/SOUND4ALL/Store.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Carrinho de Compras"
+                                    style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                            </div>
+                            <div class="col-md-6">
+                                <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Vista Mobile"
+                                    style="cursor: pointer;" data-bs-toggle="modal" data-bs-target="#galleryModal">
+                            </div>
+                        </div>
+
+                        <!-- Único Modal para toda a Galeria -->
+                        <div class="modal fade" id="galleryModal" tabindex="-1" aria-labelledby="galleryModalLabel"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-xl">
+                                <!-- modal-xl garante tamanho máximo no ecrã -->
+                                <div class="modal-content bg-dark text-white border-0">
+                                    <!-- Fundo escuro para destacar a imagem -->
+                                    <div class="modal-header border-0 pe-4 pt-4">
+                                        <h6 class="modal-title" id="galleryModalLabel">Exibição de Imagem</h6>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body text-center p-4">
+                                        <!-- Imagem dinâmica que será alterada pelo JavaScript -->
+                                        <img src="" id="modalImage" class="img-fluid rounded shadow"
+                                            alt="Preview Grande">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <!-- Coluna Lateral (Sidebar Técnica) -->
+                        <div class="col-lg-4">
+                            <div class="p-4 rounded cards_bg sticky-top"
+                                style="top: 100px; border: 1px solid rgba(88,164,176,0.2);">
+                                <h5 class="separators">Tecnologias</h5>
+                                <div class="d-flex flex-wrap gap-2 mb-4">
+                                    <span class="badge bg-info text-dark p-2 px-3">PHP 8.0</span>
+                                    <span class="badge bg-info text-dark p-2 px-3">MySQL</span>
+                                    <span class="badge bg-info text-dark p-2 px-3">HTML5/CSS3</span>
+                                    <span class="badge bg-info text-dark p-2 px-3">Bootstrap 5</span>
+                                    <span class="badge bg-info text-dark p-2 px-3">Javascript</span>
+                                </div>
+
+                                <h5 class="separators">Acesso ao Projeto</h5>
+                                <div class="alert alert-dark border-0 small mb-3"
+                                    style="background: rgba(255,255,255,0.05);">
+                                    <i class="bi bi-info-circle me-2"></i> Este projeto foi otimizado para visualização
+                                    em
+                                    <strong>smartphones</strong>.
+                                </div>
+                                <a href="#" target="_blank" class="btn btn_color w-100 py-3 fw-bold">
+                                    <i class="bi bi-phone me-2"></i> Abrir Web App
+                                </a>
+                                <a href="index.html" class="btn btn-outline-light w-100 mt-2">
+                                    <i class="bi bi-arrow-left"></i> Voltar ao Início
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </main>
+
+
+        <!--Footer - redes sociais/portefólios + legal parts-->
+        <!-- Footer -->
+        <footer class="Footer_color mt-5">
+            <div class="container py-4">
+                <div class="row align-items-center g-3">
+                    <!-- Lado Esquerdo: Copyright -->
+                    <div class="col-12 col-md-4 text-center text-md-start">
+                        <span class="small opacity-75">© 2026 <strong>Inês Sérgio</strong></span>
+                    </div>
+
+                    <!-- Centro: Mensagem Técnica -->
+                    <div class="col-12 col-md-4 text-center">
+                        <span class="small opacity-75">Desenvolvido com HTML,
+                            CSS & Bootstrap</span>
+                    </div>
+
+                    <!-- Lado Direito: Links Rápidos ou Localização -->
+                    <div class="col-12 col-md-4 text-center text-md-end">
+                        <div class="small">
+                            <i class="bi bi-geo-alt-fill text-info"></i> Aveiro, Portugal
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>
