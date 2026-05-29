@@ -29,6 +29,28 @@ main {
   letter-spacing: -1px;
 }
 
+.profile_me {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+ border-radius: 15px;
+}
+
+/* Efeito na foto de perfil */
+.profile-blob {
+  width: fit-content;
+  padding: 10px;
+  background: linear-gradient(45deg, #093c5d, #58a4b0);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+
+  /* Forma orgânica moderna */
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+  transition: 0.5s ease;
+}
+
+.profile-blob:hover {
+  border-radius: 50%;
+  transform: rotate(2deg);
+}
+
 /* Títulos Globais de Secção */
 .separators {
   font-weight: 700;

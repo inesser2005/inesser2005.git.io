@@ -86,8 +86,8 @@
     <section class="container-fluid py-5 mb-5 hero-bg animar-entrada">
       <div class="container">
         <div class="row align-items-center p-3">
-          <!-- Foto de Perfil com brilho -->
-          <div class="col-12 col-lg-5 text-center position-relative">
+          <!-- Foto de Perfil toque interativo -->
+          <div class="col-12 col-lg-5 rounded text-center position-relative">
             <div class="profile-blob mx-auto">
               <img src="Images/Progamador_Pics/me_2_.jpeg" class="img-fluid profile_me"
                 alt="Inês Sérgio - Programadora Web">
@@ -213,6 +213,7 @@
 
 
     </div>
+
     <!--Main - Projetos e links diretos -->
     <div class="container mb-5" id="projetos">
       <h5 class="separators mb-4">Projetos</h5>
@@ -221,9 +222,11 @@
         <!-- NABU -->
         <div class="col animar-entrada delay-1">
           <div class="card h-100 cards_bg border-0 shadow-sm">
-            <span class="align-middle text-center p-3">
-              <img src="Images/Projetos_Logos/NABU_LOGO.png" class="card-img-top" alt="NABU Logo">
-            </span>
+            <div class="d-flex align-items-center justify-content-center p-3 m-3 bg-dark rounded-3 shadow-sm"
+              style="height: 100px;">
+              <img src="Images/Projetos_Logos/NABU_LOGO.png" class="img-fluid" alt="NABU Logo"
+                style="max-height: 100%; object-fit: contain;">
+            </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">NABU</h5>
               <p class="card-text small opacity-75">
@@ -239,9 +242,12 @@
         <!-- F1TRACKER -->
         <div class="col animar-entrada delay-2">
           <div class="card h-100 cards_bg border-0 shadow-sm">
-            <span class="align-middle text-center p-3">
-              <img src="Images/Projetos_Logos/F1TRACKER_LOGO.png" class="card-img-top" alt="F1TRACKER Logo">
-            </span>
+            <!-- ALTERAÇÃO: Fundo escuro que torna a palavra "TRACK" branca totalmente visível -->
+            <div class="d-flex align-items-center justify-content-center p-3 m-3 bg-dark rounded-3 shadow-sm"
+              style="height: 100px;">
+              <img src="Images/Projetos_Logos/F1TRACKER_LOGO.png" class="img-fluid" alt="F1TRACKER Logo"
+                style="max-height: 100%; object-fit: contain;">
+            </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">F1TRACKER</h5>
               <p class="card-text small opacity-75">
@@ -256,17 +262,18 @@
 
         <!-- ADPLP -->
         <div class="col animar-entrada delay-3">
-          <!-- position-relative permite posicionar o badge de forma absoluta -->
           <div class="card h-100 cards_bg border-0 shadow-sm position-relative">
-            <!-- CORREÇÃO: Badge reposicionado de forma flutuante e elegante na borda superior -->
             <span
               class="badge rounded-pill bg-warning text-dark position-absolute top-0 start-50 translate-middle shadow-sm px-3 py-2"
               style="z-index: 10; font-size: 0.75rem;">
               Em progresso
             </span>
-            <span class="align-middle text-center p-3 mt-2">
-              <img src="Images/Projetos_Logos/ADPLP_LOGO.png" class="card-img-top" alt="ADPLP Logo">
-            </span>
+            <!-- ALTERAÇÃO: Fundo escuro. Dica: Verifique se o caminho "Images/Projetos_Logos/ADPLP_LOGO.png" está correto no seu computador -->
+            <div class="d-flex align-items-center justify-content-center p-3 mx-3 mb-3 mt-4 bg-dark rounded-3 shadow-sm"
+              style="height: 100px;">
+              <img src="Images/Projetos_Logos/ADPLP_LOGO.png" class="img-fluid" alt="ADPLP Logo"
+                style="max-height: 100%; object-fit: contain;">
+            </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">ADPLP</h5>
               <p class="card-text small opacity-75">
@@ -280,12 +287,14 @@
         </div>
 
         <!-- Sound4all -->
-        <!-- CORREÇÃO: Adicionadas as classes de animação e limpa a duplicação do h-100 -->
         <div class="col animar-entrada delay-4">
           <div class="card h-100 cards_bg border-0 shadow-sm">
-            <span class="align-middle text-center p-3">
-              <img src="Images/Projetos_Logos/Untitled.png" class="card-img-top" alt="Sound4all Logo">
-            </span>
+            <!-- ALTERAÇÃO: Fundo escuro para manter a consistência visual em toda a grade -->
+            <div class="d-flex align-items-center justify-content-center p-3 m-3 bg-dark rounded-3 shadow-sm"
+              style="height: 100px;">
+              <img src="Images/Projetos_Logos/Untitled.png" class="img-fluid" alt="Sound4all Logo"
+                style="max-height: 100%; object-fit: contain;">
+            </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Sound4all</h5>
               <p class="card-text small opacity-75">
@@ -299,6 +308,7 @@
         </div>
       </div>
     </div>
+
 
 
     <!-- Footer -->
