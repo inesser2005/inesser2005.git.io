@@ -1,13 +1,12 @@
-// js/tradutor.js
 
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Função melhorada para aplicar as traduções
+  // Função  para aplicar as traduções
   function aplicarIdioma(idioma) {
     // Procura todos os elementos que têm o atributo data-pt
     const elementos = document.querySelectorAll("[data-pt]");
     
     elementos.forEach(el => {
-      // Usamos innerHTML em vez de textContent para suportar tags como <strong> ou <i>
+      // innerHTML  para suportar tags como <strong> ou <i>
       if (idioma === "en") {
         el.innerHTML = el.getAttribute("data-en");
       } else {
@@ -25,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 2. Lógica de decisão inicial
+  // logica de decisão inicial
   const idiomaGuardado = localStorage.getItem("idioma-preferido");
 
   if (idiomaGuardado) {
@@ -39,7 +38,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // 3. Ouvinte de clique para o botão (funciona com cliques repetidos)
+  // check clicks (funciona com cliques repetidos)
   const btnIdioma = document.getElementById("btn-idioma");
   if (btnIdioma) {
     btnIdioma.addEventListener("click", (e) => {
