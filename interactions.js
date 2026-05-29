@@ -57,64 +57,80 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
-// Typewriter effect
+
+// Typewriter effect com suporte Multi-idioma
 document.addEventListener("DOMContentLoaded", () => {
-  const words = [
-    "Programadora Full Stack",
-    "Designer UX/UI",
-    "Estudante de Multimédia",
-    "Criadora de Conteúdo Digital"
-  ];
+  // 1. Dicionário de palavras estruturado por idioma
+  const wordsLibrary = {
+    pt: [
+      "Programadora Full Stack",
+      "Designer UX/UI",
+      "Estudante de Multimédia",
+      "Criadora de Conteúdo Digital"
+    ],
+    en: [
+      "Full Stack Developer",
+      "UX/UI Designer",
+      "Multimedia Student",
+      "Digital Content Creator"
+    ]
+  };
 
   let wordIndex = 0;
   let charIndex = 0;
   let isDeleting = false;
   const targetSpan = document.getElementById("typewriter-text");
 
-  // Só executa o script se o elemento existir na página atual (evita erros na consola)
   if (targetSpan) {
     function typeEffect() {
-      const currentWord = words[wordIndex];
+      // 2. Deteta dinamicamente o idioma atual da página (padrão 'pt' se falhar)
+      const idiomaAtual = document.documentElement.lang || "pt";
+
+      // Obtém a lista de palavras correta com base no idioma ativo
+      const currentWordsList = wordsLibrary[idiomaAtual] || wordsLibrary["pt"];
+      const currentWord = currentWordsList[wordIndex];
+
+      // Proteção: se por algum motivo o índice ficar fora do tamanho da lista (ex: listas com tamanhos diferentes)
+      if (!currentWord) {
+        wordIndex = 0;
+        setTimeout(typeEffect, 100);
+        return;
+      }
 
       if (isDeleting) {
-        // Remove uma letra
         targetSpan.textContent = currentWord.substring(0, charIndex - 1);
         charIndex--;
       } else {
-        // Adiciona uma letra
         targetSpan.textContent = currentWord.substring(0, charIndex + 1);
         charIndex++;
       }
 
-      // Define as velocidades das animações em milissegundos
       let typeSpeed = isDeleting ? 50 : 100;
 
-      // Se a palavra estiver toda escrita
       if (!isDeleting && charIndex === currentWord.length) {
-        typeSpeed = 1500; // Tempo de pausa com a palavra completa no ecrã
+        typeSpeed = 1500;
         isDeleting = true;
       }
-      // Se a palavra terminou de ser apagada
       else if (isDeleting && charIndex === 0) {
         isDeleting = false;
-        wordIndex = (wordIndex + 1) % words.length; // Avança para a próxima palavra
-        typeSpeed = 500; // Pausa curta antes de começar a escrever a nova
+        wordIndex = (wordIndex + 1) % currentWordsList.length;
+        typeSpeed = 500;
       }
 
       setTimeout(typeEffect, typeSpeed);
     }
 
-    // Inicia a animação
     typeEffect();
   }
 });
 
-// Darkmode/Lightmod// 1. SINCRO DE TEMA IMEDIATA (Executa mal a página abre para não haver falhas)
+
+// Darkmode/Lightmod//  SINCRO DE TEMA IMEDIATA 
 const htmlTag = document.documentElement;
 const savedTheme = localStorage.getItem("portfolio-theme") || "dark";
 htmlTag.setAttribute("data-bs-theme", savedTheme);
 
-// 2. CONFIGURAÇÃO DOS BOTÕES (Espera o HTML carregar)
+//  CONFIG DOS BOTÕES (Espera o HTML carregar)
 document.addEventListener("DOMContentLoaded", () => {
   const themeToggleBtn = document.getElementById("theme-toggle");
   const themeIcon = document.getElementById("theme-icon");
@@ -137,7 +153,7 @@ document.addEventListener("DOMContentLoaded", () => {
     themeToggleBtn.addEventListener("click", () => {
       const currentTheme = htmlTag.getAttribute("data-bs-theme");
       const newTheme = currentTheme === "dark" ? "light" : "dark";
-      
+
       htmlTag.setAttribute("data-bs-theme", newTheme);
       localStorage.setItem("portfolio-theme", newTheme);
       updateIcon(newTheme);

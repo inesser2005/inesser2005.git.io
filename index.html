@@ -8,8 +8,9 @@
 
   <!--Favicon-->
   <link rel="icon" href="/Images/Projetos_Logos/favicon_io/favicon.png" type="image/x-icon">
-  <!--interactions-->
+  <!--interactions~/translations-->
   <script defer src="interactions.js"></script>
+  <script src="tradutor.js"></script>
   <!--styles-->
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -31,21 +32,26 @@
   <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
     <div class="container">
       <!-- Logótipo / Nome -->
-      <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html"> <span
-          style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
+      <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html">
+        <span style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
       </a>
 
-      <!-- Menu Hambúrguer (visível apenas em mobile) -->
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <!-- Mobile nav -->
+      <button class="navbar-toggler border-0 p-2 shadow-none" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <!-- Três linhas que se transformam no X via CSS -->
+        <div class="menu-hamburguer-custom">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
       </button>
 
       <!-- Links do Menu -->
       <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto nav-underline">
+        <ul class="navbar-nav ms-auto nav-underline align-items-center">
           <li class="nav-item px-lg-2">
-            <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+            <a class="nav-link active" data-pt="Início" data-en="Home" aria-current="page" href="index.html">Início</a>
           </li>
           <li class="nav-item px-lg-2">
             <a class="nav-link" href="project_nabu.html">NABU</a>
@@ -60,18 +66,26 @@
             <a class="nav-link" href="project_sound_4all.html">Sound4all</a>
           </li>
 
+          <!-- Modo Escuro/Claro -->
           <li class="nav-item px-lg-2 my-2 my-lg-0">
             <button id="theme-toggle" class="btn btn-link nav-link border-0 text-white p-2"
-              aria-label="Mudar tema visual">
-              <!-- O Bootstrap Icons vai alternar estes ícones automaticamente via JS -->
+              aria-label="Mudar tema visual/change theme mode">
               <i id="theme-icon" class="bi bi-sun-fill fs-5"></i>
             </button>
           </li>
 
+          <!-- CORREÇÃO: Botão de Idioma agora está dentro de um <li> para alinhar corretamente -->
+          <li class="nav-item px-lg-2 my-2 my-lg-0">
+            <button id="btn-idioma" class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold">EN</button>
+          </li>
 
+          <!-- Botão de Contacto -->
           <li class="nav-item ms-lg-3">
-            <a class="btn btn-outline-info fw-bold px-4 rounded-pill" href="contact.html">
-              <i class="bi bi-envelope-at me-2"></i> Contacto
+            <a class="btn btn-outline-info fw-bold px-4 rounded-pill d-inline-flex align-items-center"
+              href="contact.html">
+              <i class="bi bi-envelope-at me-2"></i>
+              <!-- CORREÇÃO: Atributos de tradução colocados apenas no texto para não apagar o ícone do envelope -->
+              <span data-pt="Contacto" data-en="Contact">Contacto</span>
             </a>
           </li>
 
@@ -96,33 +110,48 @@
 
           <!-- Texto de Apresentação -->
           <div class="col-12 col-lg-7 text-center text-lg-start mt-4 mt-lg-0">
-            <h6 class="text-info fw-bold text-uppercase mb-2">Bem-vindo ao meu portefólio</h6>
+            <h6 class="text-info fw-bold text-uppercase mb-2" data-pt="Bem-vindo ao meu
+              portefólio" data-en="Welcome to my portfolio">Bem-vindo ao meu
+              portefólio</h6>
             <h1 class="display-4 fw-bold mb-3"><span style="color: #58a4b0;">&lt;</span> Inês Sérgio <span
                 style="color: #58a4b0;">/&gt;</span></h1>
             <div>
               <div class="hero-text-container my-3">
                 <p class="lead text-start">
-                  Sou <span id="typewriter-text" class="text-info fw-bold border-end border-2 border-info pe-1"></span>
+                  Sou <span id="typewriter-text" class="text-info fw-bold border-end border-2 pe-1"></span>
                 </p>
               </div>
             </div>
             <p class="lead text-start lh-base mb-4">
-              Sou <strong>programadora Full-stack</strong> em formação na Universidade de Aveiro.
-              Especializada em criar soluções robustas com PHP, MySQL e interfaces interativas com Javascript e React.
+              <!-- O parágrafo inteiro será gerido pelo tradutor para manter a estrutura HTML correta -->
+              <span data-pt="Sou" data-en="I am a">Sou</span>
+              <strong data-pt="programadora Full-stack" data-en="Full-stack developer">programadora Full-stack</strong>
+              <span
+                data-pt="em formação na Universidade de Aveiro. Especializada em criar soluções robustas com PHP, MySQL e interfaces interativas com Javascript e React."
+                data-en="in training at the University of Aveiro. Specialized in creating robust solutions with PHP, MySQL, and interactive interfaces with Javascript and React.">
+                em formação na Universidade de Aveiro. Especializada em criar soluções robustas com PHP, MySQL e
+                interfaces interativas com Javascript e React.
+              </span>
             </p>
 
-            <!-- Botões de Ação Rápida -->
+            <!-- Botões de Acção Rápida -->
             <div class="d-flex flex-wrap gap-2 justify-content-center justify-content-lg-start mb-4">
               <a href="contact.html" class="btn btn_color px-4 py-2 fw-bold rounded-pill">
-                <i class="bi bi-chat-dots me-2"></i> Vamos conversar?
+                <i class="bi bi-chat-dots me-2"></i>
+                <!-- Tag span para traduzir apenas o texto sem apagar o ícone bi-chat-dots -->
+                <span data-pt="Vamos conversar?" data-en="Let's talk?">Vamos conversar?</span>
               </a>
               <a href="#projetos" class="btn btn-outline-info px-4 py-2 rounded-pill">
-                <i class="bi bi-code-slash me-2"></i> Ver Projetos
+                <i class="bi bi-code-slash me-2"></i>
+                <!-- Tag span para traduzir apenas o texto sem apagar o ícone bi-code-slash -->
+                <span data-pt="Ver Projetos" data-en="View Projects">Ver Projetos</span>
               </a>
             </div>
 
+
             <!-- Links Sociais Rápidos -->
-            <h6 class="small fw-bold text-muted mb-3">Entre em contacto comigo:</h6>
+            <h6 class="small fw-bold text-muted mb-3" data-pt="Entre em contacto comigo:"
+              data-en="Get in touch with me:">Entre em contacto comigo:</h6>
             <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
               <!-- CORREÇÃO: Alinhadas as classes estruturais e específicas para cada rede -->
               <a href="https://www.linkedin.com/in/inesser2005" target="_blank" class="btn-social btn-linkedin"
@@ -147,18 +176,27 @@
 
     <!--Education - Section for degrees-->
     <section id="educacao" class="container my-4 animar-entrada">
-      <h5 class="separators mb-3">Educação</h5>
+      <h5 class="separators mb-3" data-pt="Educação" data-en="Education">Educação</h5>
       <div class="row">
         <!-- Restringe a largura do card de Educação para alinhar com os outros de baixo no Desktop -->
         <div class="col-12 col-md-6 col-lg-4">
           <div class="p-3 border shadow-sm cards_bg h-100 d-flex align-items-center gap-3">
             <img src="Images/ualogo.png" alt="UA Logo" class="img-fluid" style="max-height: 60px;">
             <div>
-              <h6 class="fw-bold mb-1" style="font-size: 0.95rem;">Licenciatura em Multimédia e Tecnologias da
-                Comunicação</h6>
-              <p class="small mb-1 opacity-75" style="font-size: 0.85rem;">Especialização em Base de Dados e Tecnologias
-                Client-side</p>
-              <span class="text-info small d-block" style="font-size: 0.8rem;">2023 - presente</span>
+              <h6 class="fw-bold mb-1" style="font-size: 0.95rem;"
+                data-pt="Licenciatura em Multimédia e Tecnologias da Comunicação"
+                data-en="Bachelor's Degree in Multimedia and Communication Technologies">
+                Licenciatura em Multimédia e Tecnologias da Comunicação
+              </h6>
+              <p class="small mb-1 opacity-75" style="font-size: 0.85rem;"
+                data-pt="Especialização em Base de Dados e Tecnologias Client-side"
+                data-en="Specialization in Databases and Client-side Technologies">
+                Especialização em Base de Dados e Tecnologias Client-side
+              </p>
+              <span class="text-info small d-block" style="font-size: 0.8rem;" data-pt="2023 - presente"
+                data-en="2023 - present">
+                2023 - presente
+              </span>
             </div>
           </div>
         </div>
@@ -166,10 +204,10 @@
     </section>
 
 
-    <!--Habilidades técnicas - Section for conhecimentos-->
 
+    <!--Habilidades técnicas - Section for conhecimentos-->
     <div class="container">
-      <h5 class="separators mb-2">Habilidades Técnicas</h5>
+      <h5 class="separators mb-2" data-pt="Habilidades Técnicas" data-en="Technical Skills">Habilidades Técnicas</h5>
       <section id="habilidades" class="container my-4 animar-entrada">
         <div class="row row-cols-2 row-cols-md-4 g-4 text-center">
           <!-- Frontend -->
@@ -177,7 +215,8 @@
             <div class="p-3 border shadow-sm cards_bg h-100">
               <i class="bi bi-filetype-html fs-1"></i>
               <h6 class="mt-2 fw-bold">HTML5 & CSS3</h6>
-              <p class="small mb-0">Semântica e Responsividade</p>
+              <p class="small mb-0" data-pt="Semântica e Responsividade" data-en="Semantics and Responsiveness">
+                Semântica e Responsividade</p>
             </div>
           </div>
 
@@ -186,7 +225,8 @@
             <div class="p-3 border shadow-sm cards_bg h-100">
               <i class="bi bi-bootstrap-fill fs-1"></i>
               <h6 class="mt-2 fw-bold">Bootstrap</h6>
-              <p class="small mb-0">Layouts e Componentes</p>
+              <p class="small mb-0" data-pt="Layouts e Componentes" data-en="Layouts and Components">Layouts e
+                Componentes</p>
             </div>
           </div>
 
@@ -195,7 +235,8 @@
             <div class="p-3 border shadow-sm cards_bg h-100">
               <i class="bi bi-filetype-php fs-1"></i>
               <h6 class="mt-2 fw-bold">PHP & MySQL</h6>
-              <p class="small mb-0">Lógica e Base de Dados</p>
+              <p class="small mb-0" data-pt="Lógica e Base de Dados" data-en="Logic and Databases">Lógica e Base de
+                Dados</p>
             </div>
           </div>
 
@@ -204,19 +245,16 @@
             <div class="p-3 border rounded shadow-sm cards_bg h-100">
               <i class="bi bi-git fs-1"></i>
               <h6 class="mt-2 fw-bold">Git & GitHub</h6>
-              <p class="small mb-0">Controlo de Versão</p>
+              <p class="small mb-0" data-pt="Controlo de Versão" data-en="Version Control">Controlo de Versão</p>
             </div>
           </div>
 
         </div>
       </section>
-
-
     </div>
-
     <!--Main - Projetos e links diretos -->
     <div class="container mb-5" id="projetos">
-      <h5 class="separators mb-4">Projetos</h5>
+      <h5 class="separators mb-4" data-pt="Projetos" data-en="Projects">Projetos</h5>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         <!-- NABU -->
@@ -229,12 +267,14 @@
             </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">NABU</h5>
-              <p class="card-text small opacity-75">
-                Projeto criado para a CBL da UA, com o objetivo de suportar a
-                economia local e dar continuidade às trocas de comunidade com um toque mais moderno e acessível.
+              <p class="card-text small opacity-75"
+                data-pt="Projeto criado para a CBL da UA, com o objetivo de suportar a economia local e dar continuidade às trocas de comunidade com um toque mais moderno e acessível."
+                data-en="Project created for UA's CBL, aiming to support the local economy and continue community exchanges with a more modern and accessible touch.">
+                Projeto criado para a CBL da UA, com o objetivo de suportar a economia local e dar continuidade às
+                trocas de comunidade com um toque mais moderno e acessível.
               </p>
-              <a href="project_nabu.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
-                projeto</a>
+              <a href="project_nabu.html" class="btn btn-outline-info w-100 mt-auto rounded-pill"
+                data-pt="Detalhes do projeto" data-en="Project details">Detalhes do projeto</a>
             </div>
           </div>
         </div>
@@ -242,7 +282,6 @@
         <!-- F1TRACKER -->
         <div class="col animar-entrada delay-2">
           <div class="card h-100 cards_bg border-0 shadow-sm">
-            <!-- ALTERAÇÃO: Fundo escuro que torna a palavra "TRACK" branca totalmente visível -->
             <div class="d-flex align-items-center justify-content-center p-3 m-3 bg-dark rounded-3 shadow-sm"
               style="height: 100px;">
               <img src="Images/Projetos_Logos/F1TRACKER_LOGO.png" class="img-fluid" alt="F1TRACKER Logo"
@@ -250,12 +289,14 @@
             </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">F1TRACKER</h5>
-              <p class="card-text small opacity-75">
+              <p class="card-text small opacity-75"
+                data-pt="Projeto elaborado para a UC de TAC, possui informação diversa e relevante. O formato do mesmo é exclusivamente desktop."
+                data-en="Project developed for the TAC course unit, featuring diverse and relevant information. It's format is exclusively desktop.">
                 Projeto elaborado para a UC de TAC, possui informação diversa e relevante. O formato do mesmo é
                 exclusivamente desktop.
               </p>
-              <a href="project_f1track.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
-                projeto</a>
+              <a href="project_f1track.html" class="btn btn-outline-info w-100 mt-auto rounded-pill"
+                data-pt="Detalhes do projeto" data-en="Project details">Detalhes do projeto</a>
             </div>
           </div>
         </div>
@@ -263,12 +304,12 @@
         <!-- ADPLP -->
         <div class="col animar-entrada delay-3">
           <div class="card h-100 cards_bg border-0 shadow-sm position-relative">
+            <!-- Badge traduzido -->
             <span
               class="badge rounded-pill bg-warning text-dark position-absolute top-0 start-50 translate-middle shadow-sm px-3 py-2"
-              style="z-index: 10; font-size: 0.75rem;">
+              style="z-index: 10; font-size: 0.75rem;" data-pt="Em progresso" data-en="In progress">
               Em progresso
             </span>
-            <!-- ALTERAÇÃO: Fundo escuro. Dica: Verifique se o caminho "Images/Projetos_Logos/ADPLP_LOGO.png" está correto no seu computador -->
             <div class="d-flex align-items-center justify-content-center p-3 mx-3 mb-3 mt-4 bg-dark rounded-3 shadow-sm"
               style="height: 100px;">
               <img src="Images/Projetos_Logos/ADPLP_LOGO.png" class="img-fluid" alt="ADPLP Logo"
@@ -276,12 +317,14 @@
             </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">ADPLP</h5>
-              <p class="card-text small opacity-75">
+              <p class="card-text small opacity-75"
+                data-pt="Projeto final de Licenciatura (ainda em desenvolvimento). Irá ser um website com back-office e o seu design é responsive."
+                data-en="Final Bachelor's project (still in development). It will be a website with a back-office and responsive design.">
                 Projeto final de Licenciatura (ainda em desenvolvimento). Irá ser um website com back-office e o seu
                 design é responsive.
               </p>
-              <a href="project_adplp.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
-                projeto</a>
+              <a href="project_adplp.html" class="btn btn-outline-info w-100 mt-auto rounded-pill"
+                data-pt="Detalhes do projeto" data-en="Project details">Detalhes do projeto</a>
             </div>
           </div>
         </div>
@@ -289,7 +332,6 @@
         <!-- Sound4all -->
         <div class="col animar-entrada delay-4">
           <div class="card h-100 cards_bg border-0 shadow-sm">
-            <!-- ALTERAÇÃO: Fundo escuro para manter a consistência visual em toda a grade -->
             <div class="d-flex align-items-center justify-content-center p-3 m-3 bg-dark rounded-3 shadow-sm"
               style="height: 100px;">
               <img src="Images/Projetos_Logos/Untitled.png" class="img-fluid" alt="Sound4all Logo"
@@ -297,19 +339,19 @@
             </div>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Sound4all</h5>
-              <p class="card-text small opacity-75">
+              <p class="card-text small opacity-75"
+                data-pt="Este projeto foi criado para melhorar as minhas skills e perceber o meu estilo no que toca à criação de um website comercial. É um mock-up."
+                data-en="This project was created to improve my skills and understand my style regarding the creation of a commercial website. It is a mock-up.">
                 Este projeto foi criado para melhorar as minhas skills e perceber o meu estilo no que toca à criação de
                 um website comercial. É um mock-up.
               </p>
-              <a href="project_sound_4all.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
-                projeto</a>
+              <a href="project_sound_4all.html" class="btn btn-outline-info w-100 mt-auto rounded-pill"
+                data-pt="Detalhes do projeto" data-en="Project details">Detalhes do projeto</a>
             </div>
           </div>
         </div>
       </div>
     </div>
-
-
 
     <!-- Footer -->
     <footer class="Footer_color mt-5">
@@ -322,9 +364,12 @@
 
           <!-- Centro: Mensagem Técnica -->
           <div class="col-12 col-md-4 text-center">
-            <span class="small opacity-75">Desenvolvido com HTML,
-              CSS & Bootstrap</span>
+            <span class="small opacity-75" data-pt="Desenvolvido com HTML, CSS & Bootstrap"
+              data-en="Developed with HTML, CSS & Bootstrap">
+              Desenvolvido com HTML, CSS & Bootstrap
+            </span>
           </div>
+
 
           <!-- Lado Direito: Links Rápidos ou Localização -->
           <div class="col-12 col-md-4 text-center text-md-end">
@@ -337,9 +382,13 @@
     </footer>
 
 
+    <!--  Scripts organizados por ordem de dependência -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"></script>
+    <script src="./interactions.js"></script>
+    <script src="./translate.js"></script>
+
 </body>
 
 </html>

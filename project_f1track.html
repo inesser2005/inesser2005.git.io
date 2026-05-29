@@ -26,33 +26,38 @@
 
 </head>
 
-<body class=".noto-sans-p">
-
+<body class="noto-sans-p">
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
         <div class="container">
             <!-- Logótipo / Nome -->
-            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html"> <span
-                    style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
+            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html">
+                <span style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
             </a>
 
-            <!-- Menu Hambúrguer (visível apenas em mobile) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Mobile nav -->
+            <button class="navbar-toggler border-0 p-2 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- Três linhas que se transformam no X via CSS -->
+                <div class="menu-hamburguer-custom">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
 
             <!-- Links do Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto nav-underline">
+                <ul class="navbar-nav ms-auto nav-underline align-items-center">
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                        <a class="nav-link" data-pt="Início" data-en="Home" href="index.html">Início</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_nabu.html">NABU</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="project_f1track.html">F1TRACK</a>
+                        <a class="nav-link active" aria-current="page" href="project_f1track.html">F1TRACK</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_adplp.html">ADPLP</a>
@@ -61,18 +66,27 @@
                         <a class="nav-link" href="project_sound_4all.html">Sound4all</a>
                     </li>
 
+                    <!-- Modo Escuro/Claro -->
                     <li class="nav-item px-lg-2 my-2 my-lg-0">
                         <button id="theme-toggle" class="btn btn-link nav-link border-0 text-white p-2"
-                            aria-label="Mudar tema visual">
-                            <!-- O Bootstrap Icons vai alternar estes ícones automaticamente via JS -->
+                            aria-label="Mudar tema visual/change theme mode">
                             <i id="theme-icon" class="bi bi-sun-fill fs-5"></i>
                         </button>
                     </li>
 
+                    <!-- CORREÇÃO: Botão de Idioma agora está dentro de um <li> para alinhar corretamente -->
+                    <li class="nav-item px-lg-2 my-2 my-lg-0">
+                        <button id="btn-idioma"
+                            class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold">EN</button>
+                    </li>
 
+                    <!-- Botão de Contacto -->
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill" href="contact.html">
-                            <i class="bi bi-envelope-at me-2"></i> Contacto
+                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill d-inline-flex align-items-center"
+                            href="contact.html">
+                            <i class="bi bi-envelope-at me-2"></i>
+                            <!-- CORREÇÃO: Atributos de tradução colocados apenas no texto para não apagar o ícone do envelope -->
+                            <span data-pt="Contacto" data-en="Contact">Contacto</span>
                         </a>
                     </li>
 
@@ -81,7 +95,7 @@
         </div>
     </nav>
 
-    <!--Main- Detralhes dos projetos-->
+    <!--Main- Detalhes dos projetos-->
     <main class="animar-entrada">
         <!-- Banner Principal -->
         <div class="banner-container shadow">
@@ -93,17 +107,29 @@
                 <!-- Coluna de Descrição -->
                 <div class="col-lg-8">
                     <h3 class="separators mb-4">F1TRACK</h3>
-                    <p class="lead">Aplicação Web Avançada para entusiastas de Fórmula 1.</p>
-                    <p>Desenvolvida para a UC de Tecnologias Avançadas para Client-side, esta plataforma foca-se na
-                        visualização de telemetria e dados estatísticos da época 2025-26.</p>
-                    <p><strong>Uso de Firebase:</strong> A utilização desta framework permite aos utilizadores efetuar
-                        login de forma rápida e eficaz.</p>
-                    <p><strong>Decisão de Design:</strong> O formato exclusivo para desktop foi escolhido para permitir
+                    <p class="lead" data-pt="Aplicação Web Avançada para entusiastas de Fórmula 1."
+                        data-en="Advanced Web Application for Formula 1 enthusiasts.">Aplicação Web Avançada para
+                        entusiastas de Fórmula 1.</p>
+                    <p data-pt="Desenvolvida para a UC de Tecnologias Avançadas para Client-side, esta plataforma foca-se na visualização de telemetria e dados estatísticos da época 2025-26."
+                        data-en="Developed for the Advanced Client-side Technologies course unit, this platform focuses on the visualization of telemetry and statistical data from the 2025-26 season.">
+                        Desenvolvida para a UC de Tecnologias Avançadas para Client-side, esta plataforma foca-se na
+                        visualização de telemetria e dados estatísticos da época 2025-26.
+                    </p>
+                    <p data-pt="<strong>Uso de Firebase:</strong> A utilização desta framework permite aos utilizadores efetuar login de forma rápida e eficaz."
+                        data-en="<strong>Firebase Usage:</strong> The use of this framework allows users to log in quickly and efficiently.">
+                        <strong>Uso de Firebase:</strong> A utilização desta framework permite aos utilizadores efetuar
+                        login de forma rápida e eficaz.
+                    </p>
+                    <p data-pt="<strong>Decisão de Design:</strong> O formato exclusivo para desktop foi escolhido para permitir a visualização detalhada de gráficos de desempenho e tabelas de tempos complexos que requerem maior espaço de ecrã."
+                        data-en="<strong>Design Decision:</strong> The exclusive desktop format was chosen to allow detailed visualization of performance charts and complex timing tables that require more screen space.">
+                        <strong>Decisão de Design:</strong> O formato exclusivo para desktop foi escolhido para permitir
                         a visualização detalhada de gráficos de desempenho e tabelas de tempos complexos que requerem
-                        maior espaço de ecrã.</p>
+                        maior espaço de ecrã.
+                    </p>
 
                     <!-- Galeria de Imagens com Triggers para os Modais -->
-                    <h5 class="separators mt-5 mb-4">Visualização da Interface</h5>
+                    <h5 class="separators mt-5 mb-4" data-pt="Visualização da Interface"
+                        data-en="Interface Visualization">Visualização da Interface</h5>
                     <div class="row g-3">
                         <!-- Imagem 1 -->
                         <div class="col-md-6">
@@ -148,7 +174,7 @@
                 <div class="col-lg-4">
                     <div class="p-4 rounded cards_bg sticky-top"
                         style="top: 100px; border: 1px solid rgba(88,164,176,0.2);">
-                        <h5 class="separators">Tecnologias</h5>
+                        <h5 class="separators" data-pt="Tecnologias" data-en="Technologies">Tecnologias</h5>
                         <div class="d-flex flex-wrap gap-2 mb-4">
                             <span class="badge bg-info text-dark p-2">React.js</span>
                             <span class="badge bg-info text-dark p-2">Firebase</span>
@@ -157,19 +183,22 @@
                             <span class="badge bg-info text-dark p-2">Sass/CSS</span>
                         </div>
 
-                        <h5 class="separators">Acesso</h5>
+                        <h5 class="separators" data-pt="Acesso" data-en="Access">Acesso</h5>
                         <a href="https://f1-track-github-io-1mki.vercel.app/" target="_blank"
                             class="btn btn_color w-100 py-3 fw-bold">
-                            <i class="bi bi-box-arrow-up-right me-2"></i> Visitar Website
+                            <i class="bi bi-box-arrow-up-right me-2"></i>
+                            <span data-pt="Visitar Website" data-en="Visit Website">Visitar Website</span>
                         </a>
                         <a href="index.html" class="btn btn-outline-light w-100 mt-2">
-                            <i class="bi bi-arrow-left"></i> Voltar ao Portefólio
+                            <i class="bi bi-arrow-left"></i>
+                            <span data-pt="Voltar ao Início" data-en="Back to Home">Voltar ao Início</span>
                         </a>
                     </div>
                 </div>
             </div>
         </div>
     </main>
+
 
     <!-- ESTRUTURAS DOS MODAIS INDIVIDUAIS (Usa 'modal-xl' para ecrãs largos de desktop ficarem nítidos) -->
 
@@ -236,7 +265,6 @@
             </div>
         </div>
     </div>
-
     <!-- Footer -->
     <footer class="Footer_color mt-5">
         <div class="container py-4">
@@ -248,9 +276,12 @@
 
                 <!-- Centro: Mensagem Técnica -->
                 <div class="col-12 col-md-4 text-center">
-                    <span class="small opacity-75">Desenvolvido com HTML,
-                        CSS & Bootstrap</span>
+                    <span class="small opacity-75" data-pt="Desenvolvido com HTML, CSS & Bootstrap"
+                        data-en="Developed with HTML, CSS & Bootstrap">
+                        Desenvolvido com HTML, CSS & Bootstrap
+                    </span>
                 </div>
+
 
                 <!-- Lado Direito: Links Rápidos ou Localização -->
                 <div class="col-12 col-md-4 text-center text-md-end">
@@ -262,9 +293,14 @@
         </div>
     </footer>
 
+
+    <!--  Scripts organizados por ordem de dependência -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="./interactions.js"></script>
+    <script src="./translate.js"></script>
+
 </body>
 
 </html>

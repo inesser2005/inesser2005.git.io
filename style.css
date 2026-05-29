@@ -24,6 +24,57 @@ main {
   flex: 1;
 }
 
+/*Navbar issue*/
+/* Remove o contorno padrão do Bootstrap ao focar no botão */
+/* Container das linhas do menu */
+.menu-hamburguer-custom {
+  width: 24px;
+  height: 18px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+/* Estilo comum para as 3 linhas */
+.menu-hamburguer-custom span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: currentColor;
+  /* Usa a cor do texto atual da sua Navbar */
+  border-radius: 2px;
+  transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  transform-origin: left center;
+  /* Garante que a rotação comece no ponto certo */
+}
+
+/* --- ANIMAÇÕES AO CLICAR (Menu Aberto) --- */
+
+/* Linha Superior: Roda 45 graus para baixo */
+.navbar-toggler[aria-expanded="true"] .menu-hamburguer-custom span:nth-child(1) {
+  transform: rotate(45deg) translate(2px, -1px);
+}
+
+/* Linha do Meio: Desaparece suavemente */
+.navbar-toggler[aria-expanded="true"] .menu-hamburguer-custom span:nth-child(2) {
+  opacity: 0;
+  transform: scaleX(0);
+}
+
+/* Linha Inferior: Roda 45 graus para cima */
+.navbar-toggler[aria-expanded="true"] .menu-hamburguer-custom span:nth-child(3) {
+  transform: rotate(-45deg) translate(1px, 2px);
+}
+
+/* Remove qualquer contorno ou sombra padrão do Bootstrap */
+.navbar-toggler:focus,
+.navbar-toggler:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Títulos Hero */
 .display-4 {
   letter-spacing: -1px;
@@ -31,7 +82,7 @@ main {
 
 .profile_me {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- border-radius: 15px;
+  border-radius: 15px;
 }
 
 /* Efeito na foto de perfil */
@@ -61,7 +112,7 @@ main {
 }
 
 /* ==========================================================================
-   2. CONFIGURAÇÃO INTEGRAL DO MODO CLARO (LIGHT MODE) - ATUALIZADO
+   ! CONFIGURAÇÃO INTEGRAL DO MODO CLARO (LIGHT MODE) - ATUALIZADO
    ========================================================================== */
 [data-bs-theme="light"] {
   background-color: #f4f6f9 !important;
@@ -70,6 +121,12 @@ main {
 [data-bs-theme="light"] body {
   background-color: #f4f6f9 !important;
   color: #212529 !important;
+}
+
+[data-bs-theme="light"] .menu-hamburguer-custom span,
+.navbar-light .menu-hamburguer-custom span,
+.light-mode .menu-hamburguer-custom span {
+  background-color: #212529 !important;
 }
 
 [data-bs-theme="light"] .separators {
@@ -162,7 +219,7 @@ main {
 
 
 /* ==========================================================================
-   5. COMPONENTE DE CARDS (PROJETOS, EDUCAÇÃO, HABILIDADES)
+   | COMPONENTE DE CARDS (PROJETOS, EDUCAÇÃO, HABILIDADES)
    ========================================================================== */
 .cards_bg,
 .card-educacao,
@@ -235,8 +292,9 @@ main {
   margin-bottom: 15px;
 }
 
+
 /* ==========================================================================
-   6. BOTÕES E ELEMENTOS INTERATIVOS
+   | BOTÕES E ELEMENTOS INTERATIVOS
    ========================================================================== */
 .btn_color {
   background-color: #0d4a75;
@@ -289,11 +347,14 @@ main {
 }
 
 /* Banners das páginas internas de detalhes */
+
 .banner-container {
   width: 100%;
-  height: 250px;
+  /* apenas para telemóveis*/
+  height: 140px;
   overflow: hidden;
   position: relative;
+  transition: height 0.3s ease;
 }
 
 .banner-image {
@@ -302,6 +363,13 @@ main {
   object-fit: cover;
   object-position: center;
   filter: brightness(0.7);
+}
+
+/* apenas para computadores e tablets*/
+@media (min-width: 768px) {
+  .banner-container {
+    height: 250px;
+  }
 }
 
 /* Previews de Imagens com Efeito Hover Ampliado */
@@ -328,7 +396,7 @@ main {
 }
 
 /* ==========================================================================
-   7. ANIMAÇÕES DE ENTRADA (FADE IN UP)
+   | ANIMAÇÕES DE ENTRADA (FADE IN UP)
    ========================================================================== */
 @keyframes fadeInUp {
   from {

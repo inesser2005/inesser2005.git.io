@@ -28,26 +28,31 @@
 </head>
 
 <body class="noto-sans-p">
-
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
         <div class="container">
             <!-- Logótipo / Nome -->
-            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html"> <span
-                    style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
+            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html">
+                <span style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
             </a>
 
-            <!-- Menu Hambúrguer (visível apenas em mobile) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Mobile nav -->
+            <button class="navbar-toggler border-0 p-2 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- Três linhas que se transformam no X via CSS -->
+                <div class="menu-hamburguer-custom">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
 
             <!-- Links do Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto nav-underline">
+                <ul class="navbar-nav ms-auto nav-underline align-items-center">
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                        <a class="nav-link" data-pt="Início" data-en="Home" href="index.html">Início</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_nabu.html">NABU</a>
@@ -59,21 +64,30 @@
                         <a class="nav-link" href="project_adplp.html">ADPLP</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="project_sound_4all.html">Sound4all</a>
+                        <a class="nav-link active" aria-current="page" href="project_sound_4all.html">Sound4all</a>
                     </li>
 
+                    <!-- Modo Escuro/Claro -->
                     <li class="nav-item px-lg-2 my-2 my-lg-0">
                         <button id="theme-toggle" class="btn btn-link nav-link border-0 text-white p-2"
-                            aria-label="Mudar tema visual">
-                            <!-- O Bootstrap Icons vai alternar estes ícones automaticamente via JS -->
+                            aria-label="Mudar tema visual/change theme mode">
                             <i id="theme-icon" class="bi bi-sun-fill fs-5"></i>
                         </button>
                     </li>
 
+                    <!-- CORREÇÃO: Botão de Idioma agora está dentro de um <li> para alinhar corretamente -->
+                    <li class="nav-item px-lg-2 my-2 my-lg-0">
+                        <button id="btn-idioma"
+                            class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold">EN</button>
+                    </li>
 
+                    <!-- Botão de Contacto -->
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill" href="contact.html">
-                            <i class="bi bi-envelope-at me-2"></i> Contacto
+                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill d-inline-flex align-items-center"
+                            href="contact.html">
+                            <i class="bi bi-envelope-at me-2"></i>
+                            <!-- CORREÇÃO: Atributos de tradução colocados apenas no texto para não apagar o ícone do envelope -->
+                            <span data-pt="Contacto" data-en="Contact">Contacto</span>
                         </a>
                     </li>
 
@@ -81,6 +95,7 @@
             </div>
         </div>
     </nav>
+
 
     <main class="animar-entrada">
         <!-- Banner de Identidade Visual -->
@@ -94,21 +109,24 @@
                     <div class="col-lg-8 text-start">
                         <h3 class="separators mb-4">Sound4all</h3>
 
-                        <p class="lead">Criação de marca e plataforma de e-commerce fictícia para áudio.</p>
-                        <p>
-                            Este projeto nasceu da vontade de explorar o meu estilo pessoal na criação de interfaces
-                            comerciais. O desafio foi criar uma identidade visual do zero e aplicá-la num site
-                            totalmente responsivo.
+                        <p class="lead" data-pt="Criação de marca e plataforma de e-commerce fictícia para áudio."
+                            data-en="Brand creation and mock e-commerce platform for audio products.">Criação de marca e
+                            plataforma de e-commerce fictícia para áudio.</p>
+
+                        Este projeto nasceu da vontade de explorar o meu estilo pessoal na criação de interfaces
+                        comerciais. O desafio foi criar uma identidade visual do zero e aplicá-la num site totalmente
+                        responsivo.
                         </p>
-                        <p>
+                        <p data-pt="<strong>Foco Multidevice:</strong> A aplicação foi pensada para garantir uma navegação fluida em dispositivos móveis e desktop, utilizando componentes personalizados do Bootstrap para manter a consistência da marca."
+                            data-en="<strong>Multidevice Focus:</strong> The application was designed to ensure seamless navigation across mobile and desktop devices, utilizing customized Bootstrap components to maintain brand consistency.">
                             <strong>Foco Multidevice:</strong> A aplicação foi pensada para garantir uma navegação
                             fluida em dispositivos móveis e desktop, utilizando componentes personalizados do Bootstrap
-                            para
-                            manter a consistência da marca.
+                            para manter a consistência da marca.
                         </p>
 
                         <!-- Galeria UX/UI -->
-                        <h5 class="separators mt-5 mb-4">Designs de UX/UI (Desktop)</h5>
+                        <h5 class="separators mt-5 mb-4" data-pt="Designs de UX/UI (Desktop)"
+                            data-en="UX/UI Designs (Desktop)">Designs de UX/UI (Desktop)</h5>
                         <div class="row g-3">
                             <!-- Imagem Desktop 1 -->
                             <div class="col-md-4">
@@ -139,7 +157,8 @@
                             </div>
                         </div>
 
-                        <h5 class="separators mt-5 mb-4">Versão Mobile (Responsividade)</h5>
+                        <h5 class="separators mt-5 mb-4" data-pt="Versão Mobile (Responsividade)"
+                            data-en="Mobile Version (Responsiveness)">Versão Mobile (Responsividade)</h5>
                         <div class="row g-3 justify-content-start">
                             <!-- Imagem Mobile 1 -->
                             <div class="col-4 col-md-3">
@@ -176,7 +195,8 @@
                     <div class="col-lg-4">
                         <div class="p-4 rounded cards_bg sticky-top"
                             style="top: 100px; border: 1px solid rgba(88,164,176,0.2);">
-                            <h5 class="separators">Linguagens & Ferramentas</h5>
+                            <h5 class="separators" data-pt="Linguagens & Ferramentas" data-en="Languages & Tools">
+                                Linguagens & Ferramentas</h5>
                             <div class="d-flex flex-wrap gap-2 mb-4">
                                 <span class="badge bg-info text-dark p-2">React.js</span>
                                 <span class="badge bg-info text-dark p-2">Javascript ES6</span>
@@ -185,21 +205,24 @@
                                 <span class="badge bg-info text-dark p-2">HTML5</span>
                             </div>
 
-                            <h5 class="separators">Explorar</h5>
-                            <!-- Link corrigido para o Sound4all -->
+                            <h5 class="separators" data-pt="Explorar" data-en="Explore">Explorar</h5>
+                            <!-- Link para o Sound4all -->
                             <a href="https://sound4all-github-io.vercel.app/" target="_blank"
                                 class="btn btn_color w-100 py-3 fw-bold">
-                                <i class="bi bi-headphones me-2"></i> Visitar Website
+                                <i class="bi bi-headphones me-2"></i>
+                                <span data-pt="Visitar Website" data-en="Visit Website">Visitar Website</span>
                             </a>
                             <a href="index.html" class="btn btn-outline-light w-100 mt-2">
-                                <i class="bi bi-arrow-left"></i> Voltar ao Portefólio
+                                <i class="bi bi-arrow-left"></i>
+                                <span data-pt="Voltar ao Início" data-en="Back to Home">Voltar ao Início</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
-
+        </div>
     </main>
+
 
     <!-- ESTRUTURAS DOS MODAIS INDIVIDUAIS (SOUND4ALL) -->
 
@@ -295,7 +318,6 @@
         </div>
     </div>
 
-
     <!-- Footer -->
     <footer class="Footer_color mt-5">
         <div class="container py-4">
@@ -307,9 +329,12 @@
 
                 <!-- Centro: Mensagem Técnica -->
                 <div class="col-12 col-md-4 text-center">
-                    <span class="small opacity-75">Desenvolvido com HTML,
-                        CSS & Bootstrap</span>
+                    <span class="small opacity-75" data-pt="Desenvolvido com HTML, CSS & Bootstrap"
+                        data-en="Developed with HTML, CSS & Bootstrap">
+                        Desenvolvido com HTML, CSS & Bootstrap
+                    </span>
                 </div>
+
 
                 <!-- Lado Direito: Links Rápidos ou Localização -->
                 <div class="col-12 col-md-4 text-center text-md-end">
@@ -322,9 +347,13 @@
     </footer>
 
 
+    <!--  Scripts organizados por ordem de dependência -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="./interactions.js"></script>
+    <script src="./translate.js"></script>
+
 </body>
 
 </html>

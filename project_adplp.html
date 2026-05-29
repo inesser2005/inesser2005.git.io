@@ -27,26 +27,31 @@
 </head>
 
 <body class="noto-sans-p">
-
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
         <div class="container">
             <!-- Logótipo / Nome -->
-            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html"> <span
-                    style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
+            <a class="navbar-brand fw-bold" aria-label="Ir para o início" href="index.html">
+                <span style="color: #58a4b0;">&lt;</span> Inês Sérgio <span style="color: #58a4b0;">/&gt;</span>
             </a>
 
-            <!-- Menu Hambúrguer (visível apenas em mobile) -->
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+            <!-- Mobile nav -->
+            <button class="navbar-toggler border-0 p-2 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <!-- Três linhas que se transformam no X via CSS -->
+                <div class="menu-hamburguer-custom">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </button>
 
             <!-- Links do Menu -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto nav-underline">
+                <ul class="navbar-nav ms-auto nav-underline align-items-center">
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
+                        <a class="nav-link" data-pt="Início" data-en="Home" href="index.html">Início</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_nabu.html">NABU</a>
@@ -55,24 +60,33 @@
                         <a class="nav-link" href="project_f1track.html">F1TRACK</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" href="project_adplp.html">ADPLP</a>
+                        <a class="nav-link active" aria-current="page" href="project_adplp.html">ADPLP</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_sound_4all.html">Sound4all</a>
                     </li>
 
+                    <!-- Modo Escuro/Claro -->
                     <li class="nav-item px-lg-2 my-2 my-lg-0">
                         <button id="theme-toggle" class="btn btn-link nav-link border-0 text-white p-2"
-                            aria-label="Mudar tema visual">
-                            <!-- O Bootstrap Icons vai alternar estes ícones automaticamente via JS -->
+                            aria-label="Mudar tema visual/change theme mode">
                             <i id="theme-icon" class="bi bi-sun-fill fs-5"></i>
                         </button>
                     </li>
 
+                    <!-- CORREÇÃO: Botão de Idioma agora está dentro de um <li> para alinhar corretamente -->
+                    <li class="nav-item px-lg-2 my-2 my-lg-0">
+                        <button id="btn-idioma"
+                            class="btn btn-sm btn-outline-secondary rounded-pill px-3 fw-bold">EN</button>
+                    </li>
 
+                    <!-- Botão de Contacto -->
                     <li class="nav-item ms-lg-3">
-                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill" href="contact.html">
-                            <i class="bi bi-envelope-at me-2"></i> Contacto
+                        <a class="btn btn-outline-info fw-bold px-4 rounded-pill d-inline-flex align-items-center"
+                            href="contact.html">
+                            <i class="bi bi-envelope-at me-2"></i>
+                            <!-- CORREÇÃO: Atributos de tradução colocados apenas no texto para não apagar o ícone do envelope -->
+                            <span data-pt="Contacto" data-en="Contact">Contacto</span>
                         </a>
                     </li>
 
@@ -80,7 +94,6 @@
             </div>
         </div>
     </nav>
-
     <main class="animar-entrada">
         <!-- Banner de Contexto -->
         <div class="banner-container shadow">
@@ -94,7 +107,9 @@
                     <h3 class="separators mb-2">ADPLP - Website</h3>
 
                     <!-- Alerta de Desenvolvimento -->
-                    <div class="alert alert-warning border-0 d-flex align-items-center mb-4" role="alert">
+                    <div class="alert alert-warning border-0 d-flex align-items-center mb-4" role="alert"
+                        data-pt="<i class='bi bi-cone-striped fs-4 me-3'></i><div><strong>Projeto em Desenvolvimento:</strong> Atualmente focado na implementação do Backend e Back-office.</div>"
+                        data-en="<i class='bi bi-cone-striped fs-4 me-3'></i><div><strong>Project under Development:</strong> Currently focused on implementing the Backend and Back-office.</div>">
                         <i class="bi bi-cone-striped fs-4 me-3"></i>
                         <div>
                             <strong>Projeto em Desenvolvimento:</strong> Atualmente focado na implementação do Backend e
@@ -102,14 +117,20 @@
                         </div>
                     </div>
 
-                    <p class="lead">Website institucional e plataforma de gestão para associação local.</p>
-                    <p>
+                    <p class="lead" data-pt="Website institucional e plataforma de gestão para associação local."
+                        data-en="Institutional website and management platform for a local association.">
+                        Website institucional e plataforma de gestão para associação local.
+                    </p>
+                    <p data-pt="Este projeto está a ser desenvolvido para uma associação de proteção local. O foco inicial foi uma curadoria cuidadosa de textos e imagens para cativar o utilizador, aliada a uma estrutura de navegação intuitiva."
+                        data-en="This project is being developed for a local protection association. The initial focus was a careful curation of texts and images to captivate the user, combined with an intuitive navigation structure.">
                         Este projeto está a ser desenvolvido para uma associação de proteção local. O foco inicial foi
                         uma curadoria cuidadosa de textos e imagens para cativar o utilizador, aliada a uma estrutura de
                         navegação intuitiva.
                     </p>
+
                     <!-- Galeria UX/UI -->
-                    <h5 class="separators mt-5 mb-4">Designs de UX/UI (Desktop)</h5>
+                    <h5 class="separators mt-5 mb-4" data-pt="Designs de UX/UI (Desktop)"
+                        data-en="UX/UI Designs (Desktop)">Designs de UX/UI (Desktop)</h5>
                     <div class="row g-3">
                         <!-- Imagem Desktop 1 -->
                         <div class="col-md-4">
@@ -140,7 +161,8 @@
                         </div>
                     </div>
 
-                    <h5 class="separators mt-5 mb-4">Versão Mobile (Responsividade)</h5>
+                    <h5 class="separators mt-5 mb-4" data-pt="Versão Mobile (Responsividade)"
+                        data-en="Mobile Version (Responsiveness)">Versão Mobile (Responsividade)</h5>
                     <div class="row g-3 justify-content-start">
                         <!-- Imagem Mobile 1 -->
                         <div class="col-4 col-md-3">
@@ -176,7 +198,7 @@
                 <div class="col-lg-4">
                     <div class="p-4 rounded cards_bg sticky-top"
                         style="top: 100px; border: 1px solid rgba(88,164,176,0.2);">
-                        <h5 class="separators">Stack Planeada</h5>
+                        <h5 class="separators" data-pt="Stack Planeada" data-en="Planned Stack">Stack Planeada</h5>
                         <div class="d-flex flex-wrap gap-2 mb-4">
                             <span class="badge bg-info text-dark p-2">HTML5</span>
                             <span class="badge bg-info text-dark p-2">CSS3</span>
@@ -185,17 +207,22 @@
                             <span class="badge bg-info text-dark p-2">MySQL</span>
                         </div>
 
-                        <h5 class="separators">Estado do Deploy</h5>
+                        <h5 class="separators" data-pt="Estado do Deploy" data-en="Deploy Status">Estado do Deploy</h5>
                         <div class="text-center p-4 mb-3 rounded" style="background: rgba(0,0,0,0.2);">
                             <div class="spinner-border text-info mb-3" role="status">
-                                <span class="visually-hidden">A carregar...</span>
+                                <span class="visually-hidden" data-pt="A carregar..." data-en="Loading...">A
+                                    carregar...</span>
                             </div>
-                            <p class="small text-muted mb-0">O link estará disponível em breve assim que a versão
-                                final for publicada.</p>
+                            <p class="small text-muted mb-0"
+                                data-pt="O link estará disponível em breve assim que a versão final for publicada."
+                                data-en="The link will be available soon as soon as the final version is published.">
+                                O link estará disponível em breve assim que a versão final for publicada.
+                            </p>
                         </div>
 
                         <a href="index.html" class="btn btn-outline-light w-100">
-                            <i class="bi bi-arrow-left"></i> Voltar ao Portefólio
+                            <i class="bi bi-arrow-left"></i>
+                            <span data-pt="Voltar ao Início" data-en="Back to Home">Voltar ao Início</span>
                         </a>
                     </div>
                 </div>
@@ -204,8 +231,6 @@
     </main>
 
     <!-- ESTRUTURAS DOS MODAIS INDIVIDUAIS (ADPLP) -->
-
-    <!-- MODAIS DESKTOP (modal-xl) -->
     <div class="modal fade" id="modalAdplpInicio" tabindex="-1" aria-hidden="true">
         <div class="modal-dialog modal-xl modal-dialog-centered">
             <div class="modal-content bg-dark border-0 shadow">
@@ -221,83 +246,7 @@
         </div>
     </div>
 
-    <div class="modal fade" id="modalAdplpArtigo" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-dark border-0 shadow">
-                <div class="modal-header border-0 p-2">
-                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
-                        aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-0 text-center">
-                    <img src="Images/Projetos_Preview/ADPLP/Artigo.png" alt="Desktop Artigo Expandido"
-                        class="img-fluid w-100 rounded-bottom">
-                </div>
-            </div>
-        </div>
-    </div>
 
-    <div class="modal fade" id="modalAdplpNoticias" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-xl modal-dialog-centered">
-            <div class="modal-content bg-dark border-0 shadow">
-                <div class="modal-header border-0 p-2">
-                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
-                        aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-0 text-center">
-                    <img src="Images/Projetos_Preview/ADPLP/Notícias.png" alt="Desktop Notícias Expandido"
-                        class="img-fluid w-100 rounded-bottom">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- MODAIS MOBILE (modal-sm para não esticar de forma desproporcional) -->
-    <div class="modal fade" id="modalAdplpArtigoMob" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content bg-dark border-0 shadow">
-                <div class="modal-header border-0 p-2">
-                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
-                        aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-0 text-center">
-                    <img src="Images/Projetos_Preview/ADPLP/Artigo - Mobile.png" alt="Mobile Artigo Expandido"
-                        class="img-fluid w-100 rounded-bottom">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalAdplpParticiparMob" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content bg-dark border-0 shadow">
-                <div class="modal-header border-0 p-2">
-                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
-                        aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-0 text-center">
-                    <img src="Images/Projetos_Preview/ADPLP/Participar Mobile.png" alt="Mobile Participar Expandido"
-                        class="img-fluid w-100 rounded-bottom">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="modalAdplpNoticiasMob" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-sm modal-dialog-centered">
-            <div class="modal-content bg-dark border-0 shadow">
-                <div class="modal-header border-0 p-2">
-                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
-                        aria-label="Fechar"></button>
-                </div>
-                <div class="modal-body p-0 text-center">
-                    <img src="Images/Projetos_Preview/ADPLP/Notícias - Mobile.png" alt="Mobile Notícias Expandido"
-                        class="img-fluid w-100 rounded-bottom">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!--Footer - redes sociais/portefólios + legal parts-->
     <!-- Footer -->
     <footer class="Footer_color mt-5">
         <div class="container py-4">
@@ -309,9 +258,12 @@
 
                 <!-- Centro: Mensagem Técnica -->
                 <div class="col-12 col-md-4 text-center">
-                    <span class="small opacity-75">Desenvolvido com HTML,
-                        CSS & Bootstrap</span>
+                    <span class="small opacity-75" data-pt="Desenvolvido com HTML, CSS & Bootstrap"
+                        data-en="Developed with HTML, CSS & Bootstrap">
+                        Desenvolvido com HTML, CSS & Bootstrap
+                    </span>
                 </div>
+
 
                 <!-- Lado Direito: Links Rápidos ou Localização -->
                 <div class="col-12 col-md-4 text-center text-md-end">
@@ -323,9 +275,14 @@
         </div>
     </footer>
 
+
+    <!--  Scripts organizados por ordem de dependência -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+    <script src="./interactions.js"></script>
+    <script src="./translate.js"></script>
+
 </body>
 
 </html>
