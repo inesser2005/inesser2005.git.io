@@ -88,24 +88,44 @@
                         a visualização detalhada de gráficos de performance e tabelas de tempos complexas que requerem
                         maior espaço de ecrã.</p>
 
-                    <!-- Galeria de Imagens -->
+                    <!-- Galeria de Imagens com Triggers para os Modais -->
                     <h5 class="separators mt-5 mb-4">Visualização da Interface</h5>
                     <div class="row g-3">
+                        <!-- Imagem 1 -->
                         <div class="col-md-6">
-                            <img src="Images/Projetos_Preview/F1TRACK/Homepage.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Homepage">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalF1Home">
+                                <img src="Images/Projetos_Preview/F1TRACK/Homepage.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Homepage"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
+                        <!-- Imagem 2 -->
                         <div class="col-md-6">
-                            <img src="Images/Projetos_Preview/F1TRACK/Drivers_page_Login.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Página de Pilotos">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalF1DriversLogin">
+                                <img src="Images/Projetos_Preview/F1TRACK/Drivers_page_Login.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                    alt="Página de Pilotos" style="cursor: pointer;">
+                            </button>
                         </div>
+                        <!-- Imagem 3 -->
                         <div class="col-md-6">
-                            <img src="Images/Projetos_Preview/F1TRACK/Drrivers_page_no_login.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Acesso Restrito">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalF1DriversNoLogin">
+                                <img src="Images/Projetos_Preview/F1TRACK/Drrivers_page_no_login.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Acesso Restrito"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
+                        <!-- Imagem 4 -->
                         <div class="col-md-6">
-                            <img src="Images/Projetos_Preview/F1TRACK/Track_pages.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Circuitos">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalF1Tracks">
+                                <img src="Images/Projetos_Preview/F1TRACK/Track_pages.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Circuitos"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -137,8 +157,72 @@
         </div>
     </main>
 
+    <!-- ESTRUTURAS DOS MODAIS INDIVIDUAIS (Usa 'modal-xl' para ecrãs largos de desktop ficarem nítidos) -->
 
-    <!--Footer - redes sociais/portefólios + legal parts-->
+    <!-- Modal 1: Homepage -->
+    <div class="modal fade" id="modalF1Home" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/F1TRACK/Homepage.png" alt="Homepage Expandida"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Drivers Login -->
+    <div class="modal fade" id="modalF1DriversLogin" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/F1TRACK/Drivers_page_Login.png" alt="Página de Pilotos Expandida"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 3: Drivers No Login -->
+    <div class="modal fade" id="modalF1DriversNoLogin" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/F1TRACK/Drrivers_page_no_login.png"
+                        alt="Acesso Restrito Expandido" class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 4: Tracks -->
+    <div class="modal fade" id="modalF1Tracks" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/F1TRACK/Track_pages.png" alt="Circuitos Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Footer -->
     <footer class="Footer_color mt-5">
         <div class="container py-4">

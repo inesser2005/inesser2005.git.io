@@ -89,7 +89,7 @@
             <h6 class="text-info fw-bold text-uppercase mb-2">Bem-vindo ao meu portefólio</h6>
             <h1 class="display-4 fw-bold mb-3"><span style="color: #58a4b0;">&lt;</span> Inês Sérgio <span
                 style="color: #58a4b0;">/&gt;</span></h1>
-            <p class="lead mb-4">
+            <p class="lead text-start lh-base mb-4">
               Sou <strong>programadora Full-stack</strong> em formação na Universidade de Aveiro.
               Especializada em criar soluções robustas com PHP, MySQL e interfaces interativas com Javascript e React.
             </p>
@@ -107,13 +107,21 @@
             <!-- Links Sociais Rápidos -->
             <h6 class="small fw-bold text-muted mb-3">CONECTE-SE COMIGO:</h6>
             <div class="d-flex gap-2 justify-content-center justify-content-lg-start">
-              <a href="https://www.linkedin.com/in/inesser2005" target="_blank" class="btn-social btn-linkedin"><i
-                  class="bi bi-linkedin"></i></a>
-              <a href="https://github.com/inesser2005" target="_blank" class="btn-social btn-github"><i
-                  class="bi bi-github"></i></a>
-              <a href="https://www.behance.net/inesser2005" target="_blank" class="btn-social btn-behance"><i
-                  class="bi bi-behance"></i></a>
+              <!-- CORREÇÃO: Alinhadas as classes estruturais e específicas para cada rede -->
+              <a href="https://www.linkedin.com/in/inesser2005" target="_blank" class="btn-social btn-linkedin"
+                aria-label="LinkedIn">
+                <i class="bi bi-linkedin"></i>
+              </a>
+              <a href="https://github.com/inesser2005" target="_blank" class="btn-social btn-github"
+                aria-label="GitHub">
+                <i class="bi bi-github"></i>
+              </a>
+              <a href="https://www.behance.net/inesser2005" target="_blank" class="btn-social btn-behance"
+                aria-label="Behance">
+                <i class="bi bi-behance"></i>
+              </a>
             </div>
+
           </div>
         </div>
       </div>
@@ -192,125 +200,123 @@
 
 
     </div>
-
-    <!--Main - Projetos  e links diretos -->
-
-    <div class="container mb-3" id="projetos">
-      <h5 class="separators">Projetos</h5>
+    <!--Main - Projetos e links diretos -->
+    <div class="container mb-5" id="projetos">
+      <h5 class="separators mb-4">Projetos</h5>
 
       <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
         <!-- NABU -->
         <div class="col animar-entrada delay-1">
-          <div class="card h-100 cards_bg">
+          <div class="card h-100 cards_bg border-0 shadow-sm">
             <span class="align-middle text-center p-3">
-              <img src="Images/Projetos_Logos/NABU_LOGO.png" class="card-img-top " alt="...">
+              <img src="Images/Projetos_Logos/NABU_LOGO.png" class="card-img-top" alt="NABU Logo">
             </span>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">NABU</h5>
-              <p class="card-text">
+              <p class="card-text small opacity-75">
                 Projeto criado para a CBL da UA, com o objetivo de suportar a
-                enconomia local e dar continuidade ás trocas de comunidade com um toque mais moderno e acessível.
+                economia local e dar continuidade às trocas de comunidade com um toque mais moderno e acessível.
               </p>
-              <a href="project_nabu.html" class="btn btn-outline-info w-100 mt-auto">Detalhes do projeto</a>
+              <a href="project_nabu.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
+                projeto</a>
             </div>
           </div>
         </div>
+
         <!-- F1TRACKER -->
         <div class="col animar-entrada delay-2">
-          <div class="card h-100 cards_bg">
+          <div class="card h-100 cards_bg border-0 shadow-sm">
             <span class="align-middle text-center p-3">
-              <img src="Images/Projetos_Logos/F1TRACKER_LOGO.png" class="card-img-top" alt="...">
+              <img src="Images/Projetos_Logos/F1TRACKER_LOGO.png" class="card-img-top" alt="F1TRACKER Logo">
             </span>
-            <!-- ADICIONADO: d-flex flex-column -->
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">F1TRACKER</h5>
-              <p class="card-text">
-                Projeto elaborado para a UC de TAC, possui informação diversa e relevante o formato do mesmo é
+              <p class="card-text small opacity-75">
+                Projeto elaborado para a UC de TAC, possui informação diversa e relevante. O formato do mesmo é
                 exclusivamente desktop.
               </p>
-              <!-- Agora o mt-auto vai funcionar e colar o botão cá em baixo -->
-              <a href="project_f1track.html" class="btn btn-outline-info w-100 mt-auto">Detalhes do projeto</a>
+              <a href="project_f1track.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
+                projeto</a>
             </div>
           </div>
         </div>
 
         <!-- ADPLP -->
         <div class="col animar-entrada delay-3">
-          <div class="card h-100 cards_bg position-relative">
-            <span class="badge rounded-pill bg-warning text-dark position-absolute top-0 end-0 m-2 shadow-sm"
-              style="z-index: 10;">
+          <!-- position-relative permite posicionar o badge de forma absoluta -->
+          <div class="card h-100 cards_bg border-0 shadow-sm position-relative">
+            <!-- CORREÇÃO: Badge reposicionado de forma flutuante e elegante na borda superior -->
+            <span
+              class="badge rounded-pill bg-warning text-dark position-absolute top-0 start-50 translate-middle shadow-sm px-3 py-2"
+              style="z-index: 10; font-size: 0.75rem;">
               Em progresso
             </span>
-            <span class="align-middle text-center p-3">
-              <img src="Images/Projetos_Logos/ADPLP_LOGO.png" class="card-img-top" alt="...">
+            <span class="align-middle text-center p-3 mt-2">
+              <img src="Images/Projetos_Logos/ADPLP_LOGO.png" class="card-img-top" alt="ADPLP Logo">
             </span>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">ADPLP</h5>
-              <p class="card-text">
+              <p class="card-text small opacity-75">
                 Projeto final de Licenciatura (ainda em desenvolvimento). Irá ser um website com back-office e o seu
                 design é responsive.
               </p>
-              <a href="project_adplp.html" class="btn btn-outline-info w-100 mt-auto">Detalhes do projeto</a>
+              <a href="project_adplp.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
+                projeto</a>
             </div>
           </div>
         </div>
 
         <!-- Sound4all -->
-        <div class="col">
-          <div class="card h-100 cards_bg">
+        <!-- CORREÇÃO: Adicionadas as classes de animação e limpa a duplicação do h-100 -->
+        <div class="col animar-entrada delay-4">
+          <div class="card h-100 cards_bg border-0 shadow-sm">
             <span class="align-middle text-center p-3">
-              <img src="Images/Projetos_Logos/Untitled.png" class="card-img-top" alt="...">
+              <img src="Images/Projetos_Logos/Untitled.png" class="card-img-top" alt="Sound4all Logo">
             </span>
             <div class="card-body d-flex flex-column">
               <h5 class="card-title">Sound4all</h5>
-              <p class="card-text">
-                Este projeto foi criado para melhorar as minhas skills e perceber o meu estilo no que se toca na
-                criação
-                de um website comercial. É um mock-up.
+              <p class="card-text small opacity-75">
+                Este projeto foi criado para melhorar as minhas skills e perceber o meu estilo no que toca à criação de
+                um website comercial. É um mock-up.
               </p>
-              <a href="project_sound_4all.html" class="btn btn-outline-info w-100 mt-auto">Detalhes do projeto</a>
+              <a href="project_sound_4all.html" class="btn btn-outline-info w-100 mt-auto rounded-pill">Detalhes do
+                projeto</a>
             </div>
-
-          </div>
-        </div>
-      </div>
-
-    </div>
-    </div>
-
-  </main>
-  <span class="p-3">
-  </span>
-
-  <!-- Footer -->
-  <footer class="Footer_color mt-5">
-    <div class="container py-4">
-      <div class="row align-items-center g-3">
-        <!-- Lado Esquerdo: Copyright -->
-        <div class="col-12 col-md-4 text-center text-md-start">
-          <span class="small opacity-75">© 2026 <strong>Inês Sérgio</strong></span>
-        </div>
-
-        <!-- Centro: Mensagem Técnica -->
-        <div class="col-12 col-md-4 text-center">
-          <span class="small opacity-75">Desenvolvido com HTML,
-            CSS & Bootstrap</span>
-        </div>
-
-        <!-- Lado Direito: Links Rápidos ou Localização -->
-        <div class="col-12 col-md-4 text-center text-md-end">
-          <div class="small">
-            <i class="bi bi-geo-alt-fill text-info"></i> Aveiro, Portugal
           </div>
         </div>
       </div>
     </div>
-  </footer>
 
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
+    <!-- Footer -->
+    <footer class="Footer_color mt-5">
+      <div class="container py-4">
+        <div class="row align-items-center g-3">
+          <!-- Lado Esquerdo: Copyright -->
+          <div class="col-12 col-md-4 text-center text-md-start">
+            <span class="small opacity-75">© 2026 <strong>Inês Sérgio</strong></span>
+          </div>
+
+          <!-- Centro: Mensagem Técnica -->
+          <div class="col-12 col-md-4 text-center">
+            <span class="small opacity-75">Desenvolvido com HTML,
+              CSS & Bootstrap</span>
+          </div>
+
+          <!-- Lado Direito: Links Rápidos ou Localização -->
+          <div class="col-12 col-md-4 text-center text-md-end">
+            <div class="small">
+              <i class="bi bi-geo-alt-fill text-info"></i> Aveiro, Portugal
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"></script>
 </body>
 
 </html>

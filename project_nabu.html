@@ -8,6 +8,8 @@
 
     <!--Favicon-->
     <link rel="icon" href="/Images/Projetos_Logos/favicon_io/favicon.png" type="image/x-icon">
+    <!--interactions-->
+    <script defer src="interactions.js"></script>
     <!--styles-->
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -24,7 +26,7 @@
 
 </head>
 
-<body class=".noto-sans-p">
+<body class="noto-sans-p">
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
         <div class="container">
@@ -68,111 +70,167 @@
         </div>
     </nav>
 
-    <main>
-        <!--Main -->
 
-        <main class="animar-entrada">
-            <!-- Banner Principal -->
-            <div class="banner-container shadow">
-                <img src="Images/Banner/nabu.jpg" alt="NABU Banner" class="banner-image">
-            </div>
+    <!--Main -->
+    <main class="animar-entrada">
+        <!-- Banner Principal -->
+        <div class="banner-container shadow">
+            <img src="Images/Banner/nabu.jpg" alt="NABU Banner" class="banner-image">
+        </div>
 
-            <div class="container my-5">
-                <div class="row g-5">
-                    <!-- Coluna de Descrição e Imagens -->
-                    <div class="col-lg-8">
-                        <h3 class="separators mb-4">NABU</h3>
-                        <p class="lead">Solução digital para a economia circular na Lousã.</p>
-                        <p class="text-start">
-                            Este projeto foi elaborado para a CBL da UA, especialmente para a Câmara Municipal da Lousã,
-                            com o objetivo de suportar a economia local e dar continuidade às trocas de comunidade com
-                            um toque mais moderno e acessível.
-                        </p>
-                        <p class="text-start">
-                            <strong>Foco Mobile:</strong> O design desta web-aplicação foi pensado exclusivamente para
-                            dispositivos móveis, priorizando a usabilidade no terreno. A implementação de mecanismos de
-                            backend foi essencial para garantir uma experiência de troca fluida.
-                        </p>
+        <div class="container my-5">
+            <div class="row g-5">
+                <!-- Coluna de Descrição e Imagens -->
+                <div class="col-lg-8">
+                    <h3 class="separators mb-4">NABU</h3>
+                    <p class="lead">Solução digital para a economia circular na Lousã.</p>
+                    <p class="text-start">
+                        Este projeto foi elaborado para a CBL da UA, especialmente para a Câmara Municipal da Lousã,
+                        com o objetivo de suportar a economia local e dar continuidade às trocas de comunidade com
+                        um toque mais moderno e acessível.
+                    </p>
+                    <p class="text-start">
+                        <strong>Foco Mobile:</strong> O design desta web-aplicação foi pensado exclusivamente para
+                        dispositivos móveis, priorizando a usabilidade no terreno. A implementação de mecanismos de
+                        backend foi essencial para garantir uma experiência de troca fluida.
+                    </p>
 
-                        <!-- Interface Mobile (Grid de Imagens) -->
-                        <h5 class="separators mt-5 mb-4">Interface do Projeto</h5>
-                        <div class="row row-cols-2 row-cols-md-3 g-3">
-                            <div class="col">
+                    <!-- Interface Mobile (Grid de Imagens) -->
+                    <h5 class="separators mt-5 mb-4">Interface do Projeto</h5>
+                    <div class="row row-cols-2 row-cols-md-3 g-3">
+                        <!-- Imagem 1 com gatilho para Modal -->
+                        <div class="col">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalNabu1">
                                 <img src="Images/Projetos_Preview/NABU/1.png"
-                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Home">
-                            </div>
-                            <div class="col">
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Home"
+                                    style="cursor: pointer;">
+                            </button>
+                        </div>
+                        <!-- Imagem 2 com gatilho para Modal -->
+                        <div class="col">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalNabu2">
                                 <img src="Images/Projetos_Preview/NABU/2.png"
-                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Trocas">
-                            </div>
-                            <div class="col">
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Trocas"
+                                    style="cursor: pointer;">
+                            </button>
+                        </div>
+                        <!-- Imagem 3 com gatilho para Modal -->
+                        <div class="col">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalNabu3">
                                 <img src="Images/Projetos_Preview/NABU/3.png"
-                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Perfil">
-                            </div>
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Perfil"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
                     </div>
+                </div> <!-- Fim da Coluna de Descrição -->
 
-                    <!-- Coluna Lateral (Sidebar Técnica) -->
-                    <div class="col-lg-4">
-                        <div class="p-4 rounded cards_bg sticky-top"
-                            style="top: 100px; border: 1px solid rgba(88,164,176,0.2);">
-                            <h5 class="separators">Tecnologias</h5>
-                            <div class="d-flex flex-wrap gap-2 mb-4">
-                                <span class="badge bg-info text-dark p-2 px-3">PHP 8.0</span>
-                                <span class="badge bg-info text-dark p-2 px-3">MySQL</span>
-                                <span class="badge bg-info text-dark p-2 px-3">HTML5/CSS3</span>
-                                <span class="badge bg-info text-dark p-2 px-3">Bootstrap 5</span>
-                                <span class="badge bg-info text-dark p-2 px-3">Javascript</span>
-                            </div>
-
-                            <h5 class="separators">Acesso ao Projeto</h5>
-                            <div class="alert alert-dark border-0 small mb-3"
-                                style="background: rgba(255,255,255,0.05);">
-                                <i class="bi bi-info-circle me-2"></i> Este projeto foi otimizado para visualização em
-                                <strong>smartphones</strong>.
-                            </div>
-                            <a href="#" target="_blank" class="btn btn_color w-100 py-3 fw-bold">
-                                <i class="bi bi-phone me-2"></i> Abrir Web App
-                            </a>
-                            <a href="index.html" class="btn btn-outline-light w-100 mt-2">
-                                <i class="bi bi-arrow-left"></i> Voltar ao Início
-                            </a>
+                <!-- Coluna Lateral (Sidebar Técnica) -->
+                <div class="col-lg-4">
+                    <div class="p-4 rounded cards_bg sticky-top"
+                        style="top: 100px; border: 1px solid rgba(88,164,176,0.2);">
+                        <h5 class="separators">Tecnologias</h5>
+                        <div class="d-flex flex-wrap gap-2 mb-4">
+                            <span class="badge bg-info text-dark p-2 px-3">PHP 8.0</span>
+                            <span class="badge bg-info text-dark p-2 px-3">MySQL</span>
+                            <span class="badge bg-info text-dark p-2 px-3">HTML5/CSS3</span>
+                            <span class="badge bg-info text-dark p-2 px-3">Bootstrap 5</span>
+                            <span class="badge bg-info text-dark p-2 px-3">Javascript</span>
                         </div>
+
+                        <h5 class="separators">Acesso ao Projeto</h5>
+                        <div class="alert alert-dark border-0 small mb-3" style="background: rgba(255,255,255,0.05);">
+                            <i class="bi bi-info-circle me-2"></i> Este projeto foi otimizado para visualização
+                            em
+                            <strong>smartphones</strong>.
+                        </div>
+                        <a href="#" target="_blank" class="btn btn_color w-100 py-3 fw-bold">
+                            <i class="bi bi-phone me-2"></i> Abrir Web App
+                        </a>
+                        <a href="index.html" class="btn btn-outline-light w-100 mt-2">
+                            <i class="bi bi-arrow-left"></i> Voltar ao Início
+                        </a>
                     </div>
                 </div>
             </div>
-        </main>
+        </div>
+    </main>
 
 
-        <!--Footer - redes sociais/portefólios + legal parts-->
-        <!-- Footer -->
-        <footer class="Footer_color mt-5">
-            <div class="container py-4">
-                <div class="row align-items-center g-3">
-                    <!-- Lado Esquerdo: Copyright -->
-                    <div class="col-12 col-md-4 text-center text-md-start">
-                        <span class="small opacity-75">© 2026 <strong>Inês Sérgio</strong></span>
-                    </div>
+    <!-- Modal Imagem 1 -->
+    <div class="modal fade" id="modalNabu1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/NABU/1.png" alt="Home Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Centro: Mensagem Técnica -->
-                    <div class="col-12 col-md-4 text-center">
-                        <span class="small opacity-75">Desenvolvido com HTML,
-                            CSS & Bootstrap</span>
-                    </div>
+    <!-- Modal Imagem 2 -->
+    <div class="modal fade" id="modalNabu2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/NABU/2.png" alt="Trocas Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
 
-                    <!-- Lado Direito: Links Rápidos ou Localização -->
-                    <div class="col-12 col-md-4 text-center text-md-end">
-                        <div class="small">
-                            <i class="bi bi-geo-alt-fill text-info"></i> Aveiro, Portugal
-                        </div>
+    <!-- Modal Imagem 3 -->
+    <div class="modal fade" id="modalNabu3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <img src="Images/Projetos_Preview/NABU/3.png" alt="Perfil" class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Footer - redes sociais/portefólios + legal parts-->
+    <!-- Footer -->
+    <footer class="Footer_color mt-5">
+        <div class="container py-4">
+            <div class="row align-items-center g-3">
+                <!-- Lado Esquerdo: Copyright -->
+                <div class="col-12 col-md-4 text-center text-md-start">
+                    <span class="small opacity-75">© 2026 <strong>Inês Sérgio</strong></span>
+                </div>
+
+                <!-- Centro: Mensagem Técnica -->
+                <div class="col-12 col-md-4 text-center">
+                    <span class="small opacity-75">Desenvolvido com HTML,
+                        CSS & Bootstrap</span>
+                </div>
+
+                <!-- Lado Direito: Links Rápidos ou Localização -->
+                <div class="col-12 col-md-4 text-center text-md-end">
+                    <div class="small">
+                        <i class="bi bi-geo-alt-fill text-info"></i> Aveiro, Portugal
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </footer>
 
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -93,27 +93,70 @@
                             consistência da marca.
                         </p>
 
-                        <!-- Galeria de Imagens -->
-                        <h5 class="separators mt-5 mb-4">Visualização do Design</h5>
+                        <!-- Galeria UX/UI -->
+                        <h5 class="separators mt-5 mb-4">Designs de UX/UI (Desktop)</h5>
                         <div class="row g-3">
-                            <div class="col-md-6">
-                                <img src="Images/Projetos_Preview/SOUND4ALL/Home.png"
-                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Homepage Sound4all">
+                            <!-- Imagem Desktop 1 -->
+                            <div class="col-md-4">
+                                <button type="button" class="btn p-0 border-0 w-100 bg-transparent"
+                                    data-bs-toggle="modal" data-bs-target="#modalSoundHome">
+                                    <img src="Images/Projetos_Preview/SOUND4ALL/Home.png"
+                                        class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                        alt="Desktop Home" style="cursor: pointer;">
+                                </button>
                             </div>
-                            <div class="col-md-6">
-                                <img src="Images/Projetos_Preview/Sound4all/About.png"
-                                    class="img-fluid rounded border shadow-sm preview-hover" alt="About">
+                            <!-- Imagem Desktop 2 -->
+                            <div class="col-md-4">
+                                <button type="button" class="btn p-0 border-0 w-100 bg-transparent"
+                                    data-bs-toggle="modal" data-bs-target="#modalSoundAbout">
+                                    <img src="Images/Projetos_Preview/SOUND4ALL/About.png"
+                                        class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                        alt="Desktop About" style="cursor: pointer;">
+                                </button>
                             </div>
-                            <div class="col-md-6">
-                                <img src="Images/Projetos_Preview/SOUND4ALL/Store.png"
-                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Carrinho de Compras">
-                            </div>
-                            <div class="col-md-6">
-                                <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png"
-                                    class="img-fluid rounded border shadow-sm preview-hover" alt="Vista Mobile">
+                            <!-- Imagem Desktop 3 -->
+                            <div class="col-md-4">
+                                <button type="button" class="btn p-0 border-0 w-100 bg-transparent"
+                                    data-bs-toggle="modal" data-bs-target="#modalSoundStore">
+                                    <img src="Images/Projetos_Preview/SOUND4ALL/Store.png"
+                                        class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                        alt="Desktop Store" style="cursor: pointer;">
+                                </button>
                             </div>
                         </div>
-                    </div>
+
+                        <h5 class="separators mt-5 mb-4">Versão Mobile (Responsividade)</h5>
+                        <div class="row g-3 justify-content-start">
+                            <!-- Imagem Mobile 1 -->
+                            <div class="col-4 col-md-3">
+                                <button type="button" class="btn p-0 border-0 w-100 bg-transparent"
+                                    data-bs-toggle="modal" data-bs-target="#modalSoundMobile1">
+                                    <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png"
+                                        class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                        alt="Mobile Vista 1" style="cursor: pointer;">
+                                </button>
+                            </div>
+                            <!-- Imagem Mobile 2 -->
+                            <div class="col-4 col-md-3">
+                                <button type="button" class="btn p-0 border-0 w-100 bg-transparent"
+                                    data-bs-toggle="modal" data-bs-target="#modalSoundMobile2">
+                                    <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png"
+                                        class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                        alt="Mobile Vista 2" style="cursor: pointer;">
+                                </button>
+                            </div>
+                            <!-- Imagem Mobile 3 -->
+                            <div class="col-4 col-md-3">
+                                <button type="button" class="btn p-0 border-0 w-100 bg-transparent"
+                                    data-bs-toggle="modal" data-bs-target="#modalSoundMobile3">
+                                    <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png"
+                                        class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                        alt="Mobile Vista 3" style="cursor: pointer;">
+                                </button>
+                            </div>
+                        </div>
+                    </div> <!-- Fecho da coluna col-lg-8 correspondente -->
+
 
                     <!-- Coluna Lateral (Sidebar Técnica) -->
                     <div class="col-lg-4">
@@ -141,10 +184,104 @@
                     </div>
                 </div>
             </div>
-        
+
     </main>
 
-    <!--Footer - redes sociais/portefólios + legal parts-->
+    <!-- ESTRUTURAS DOS MODAIS INDIVIDUAIS (SOUND4ALL) -->
+
+    <!-- MODAIS DESKTOP (modal-xl) -->
+    <div class="modal fade" id="modalSoundHome" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/SOUND4ALL/Home.png" alt="Desktop Home Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSoundAbout" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/SOUND4ALL/About.png" alt="Desktop About Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSoundStore" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/SOUND4ALL/Store.png" alt="Desktop Store Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAIS MOBILE (modal-sm) -->
+    <div class="modal fade" id="modalSoundMobile1" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png" alt="Mobile Vista 1 Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSoundMobile2" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png" alt="Mobile Vista 2 Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalSoundMobile3" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/SOUND4ALL/Mobile.png" alt="Mobile Vista 3 Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <!-- Footer -->
     <footer class="Footer_color mt-5">
         <div class="container py-4">

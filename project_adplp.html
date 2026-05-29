@@ -24,7 +24,7 @@
 
 </head>
 
-<body class=".noto-sans-p">
+<body class="noto-sans-p">
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
         <div class="container">
@@ -94,37 +94,66 @@
                         curadoria cuidadosa de textos e imagens para cativar o utilizador, aliada a uma estrutura de
                         navegação intuitiva.
                     </p>
-
                     <!-- Galeria UX/UI -->
                     <h5 class="separators mt-5 mb-4">Designs de UX/UI (Desktop)</h5>
                     <div class="row g-3">
+                        <!-- Imagem Desktop 1 -->
                         <div class="col-md-4">
-                            <img src="Images/Projetos_Preview/ADPLP/Início.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Desktop Início">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalAdplpInicio">
+                                <img src="Images/Projetos_Preview/ADPLP/Início.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Desktop Início"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
+                        <!-- Imagem Desktop 2 -->
                         <div class="col-md-4">
-                            <img src="Images/Projetos_Preview/ADPLP/Artigo.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Desktop Artigo">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalAdplpArtigo">
+                                <img src="Images/Projetos_Preview/ADPLP/Artigo.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Desktop Artigo"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
+                        <!-- Imagem Desktop 3 -->
                         <div class="col-md-4">
-                            <img src="Images/Projetos_Preview/ADPLP/Notícias.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Desktop Notícias">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalAdplpNoticias">
+                                <img src="Images/Projetos_Preview/ADPLP/Notícias.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                    alt="Desktop Notícias" style="cursor: pointer;">
+                            </button>
                         </div>
                     </div>
 
                     <h5 class="separators mt-5 mb-4">Versão Mobile (Responsividade)</h5>
                     <div class="row g-3 justify-content-start">
+                        <!-- Imagem Mobile 1 -->
                         <div class="col-4 col-md-3">
-                            <img src="Images/Projetos_Preview/ADPLP/Artigo - Mobile.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Mobile Artigo">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalAdplpArtigoMob">
+                                <img src="Images/Projetos_Preview/ADPLP/Artigo - Mobile.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Mobile Artigo"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
+                        <!-- Imagem Mobile 2 -->
                         <div class="col-4 col-md-3">
-                            <img src="Images/Projetos_Preview/ADPLP/Participar Mobile.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Mobile Participar">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalAdplpParticiparMob">
+                                <img src="Images/Projetos_Preview/ADPLP/Participar Mobile.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100"
+                                    alt="Mobile Participar" style="cursor: pointer;">
+                            </button>
                         </div>
+                        <!-- Imagem Mobile 3 -->
                         <div class="col-4 col-md-3">
-                            <img src="Images/Projetos_Preview/ADPLP/Notícias - Mobile.png"
-                                class="img-fluid rounded border shadow-sm preview-hover" alt="Mobile Notícias">
+                            <button type="button" class="btn p-0 border-0 w-100 bg-transparent" data-bs-toggle="modal"
+                                data-bs-target="#modalAdplpNoticiasMob">
+                                <img src="Images/Projetos_Preview/ADPLP/Notícias - Mobile.png"
+                                    class="img-fluid rounded border shadow-sm preview-hover w-100" alt="Mobile Notícias"
+                                    style="cursor: pointer;">
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -147,8 +176,8 @@
                             <div class="spinner-border text-info mb-3" role="status">
                                 <span class="visually-hidden">A carregar...</span>
                             </div>
-                            <p class="small text-muted mb-0">O link estará disponível em breve assim que a versão Beta
-                                for publicada.</p>
+                            <p class="small text-muted mb-0">O link estará disponível em breve assim que a versão
+                                final  for publicada.</p>
                         </div>
 
                         <a href="index.html" class="btn btn-outline-light w-100">
@@ -159,6 +188,100 @@
             </div>
         </div>
     </main>
+    
+    <!-- ESTRUTURAS DOS MODAIS INDIVIDUAIS (ADPLP) -->
+
+    <!-- MODAIS DESKTOP (modal-xl) -->
+    <div class="modal fade" id="modalAdplpInicio" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/ADPLP/Início.png" alt="Desktop Início Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdplpArtigo" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/ADPLP/Artigo.png" alt="Desktop Artigo Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdplpNoticias" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-xl modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/ADPLP/Notícias.png" alt="Desktop Notícias Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAIS MOBILE (modal-sm para não esticar de forma desproporcional) -->
+    <div class="modal fade" id="modalAdplpArtigoMob" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/ADPLP/Artigo - Mobile.png" alt="Mobile Artigo Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdplpParticiparMob" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/ADPLP/Participar Mobile.png" alt="Mobile Participar Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="modalAdplpNoticiasMob" tabindex="-1" aria-hidden="true">
+        <div class="modal-dialog modal-sm modal-dialog-centered">
+            <div class="modal-content bg-dark border-0 shadow">
+                <div class="modal-header border-0 p-2">
+                    <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal"
+                        aria-label="Fechar"></button>
+                </div>
+                <div class="modal-body p-0 text-center">
+                    <img src="Images/Projetos_Preview/ADPLP/Notícias - Mobile.png" alt="Mobile Notícias Expandido"
+                        class="img-fluid w-100 rounded-bottom">
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!--Footer - redes sociais/portefólios + legal parts-->
     <!-- Footer -->
