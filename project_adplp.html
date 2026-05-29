@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="pt-pt" data-bs-theme="dark">
+<html lang="pt-pt">
 
 <head>
     <meta charset="UTF-8">
@@ -8,6 +8,8 @@
 
     <!--Favicon-->
     <link rel="icon" href="/Images/Projetos_Logos/favicon_io/favicon.png" type="image/x-icon">
+    <!--interactions-->
+    <script defer src="interactions.js"></script>
     <!--styles-->
     <link rel="stylesheet" href="style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -25,6 +27,7 @@
 </head>
 
 <body class="noto-sans-p">
+
     <!-- Navbar-->
     <nav class="navbar navbar-expand-lg sticky-top bg-dark-subtle" data-bs-theme="dark">
         <div class="container">
@@ -43,7 +46,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto nav-underline">
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link active" href="index.html">Início</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Início</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_nabu.html">NABU</a>
@@ -52,11 +55,21 @@
                         <a class="nav-link" href="project_f1track.html">F1TRACK</a>
                     </li>
                     <li class="nav-item px-lg-2">
-                        <a class="nav-link" aria-current="page" href="project_adplp.html">ADPLP</a>
+                        <a class="nav-link" href="project_adplp.html">ADPLP</a>
                     </li>
                     <li class="nav-item px-lg-2">
                         <a class="nav-link" href="project_sound_4all.html">Sound4all</a>
                     </li>
+
+                    <li class="nav-item px-lg-2 my-2 my-lg-0">
+                        <button id="theme-toggle" class="btn btn-link nav-link border-0 text-white p-2"
+                            aria-label="Mudar tema visual">
+                            <!-- O Bootstrap Icons vai alternar estes ícones automaticamente via JS -->
+                            <i id="theme-icon" class="bi bi-sun-fill fs-5"></i>
+                        </button>
+                    </li>
+
+
                     <li class="nav-item ms-lg-3">
                         <a class="btn btn-outline-info fw-bold px-4 rounded-pill" href="contact.html">
                             <i class="bi bi-envelope-at me-2"></i> Contacto
@@ -67,6 +80,7 @@
             </div>
         </div>
     </nav>
+
     <main class="animar-entrada">
         <!-- Banner de Contexto -->
         <div class="banner-container shadow">
@@ -90,8 +104,8 @@
 
                     <p class="lead">Website institucional e plataforma de gestão para associação local.</p>
                     <p>
-                        Este projeto está a ser elaborado para uma associação de proteção local. O foco inicial foi uma
-                        curadoria cuidadosa de textos e imagens para cativar o utilizador, aliada a uma estrutura de
+                        Este projeto está a ser desenvolvido para uma associação de proteção local. O foco inicial foi
+                        uma curadoria cuidadosa de textos e imagens para cativar o utilizador, aliada a uma estrutura de
                         navegação intuitiva.
                     </p>
                     <!-- Galeria UX/UI -->
@@ -177,7 +191,7 @@
                                 <span class="visually-hidden">A carregar...</span>
                             </div>
                             <p class="small text-muted mb-0">O link estará disponível em breve assim que a versão
-                                final  for publicada.</p>
+                                final for publicada.</p>
                         </div>
 
                         <a href="index.html" class="btn btn-outline-light w-100">
@@ -188,7 +202,7 @@
             </div>
         </div>
     </main>
-    
+
     <!-- ESTRUTURAS DOS MODAIS INDIVIDUAIS (ADPLP) -->
 
     <!-- MODAIS DESKTOP (modal-xl) -->

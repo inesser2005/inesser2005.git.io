@@ -1,4 +1,6 @@
-/* Tipografia */
+/* ==========================================================================
+   1. TIPOGRAFIA & CONFIGURAÇÕES GERAIS
+   ========================================================================== */
 body {
   font-family: "Signika", sans-serif;
   font-weight: 300;
@@ -10,108 +12,167 @@ body {
   min-height: 100vh;
 }
 
-/*geral*/
 html {
   scroll-behavior: smooth;
 }
-
 
 .signika_letra {
   font-family: "Signika", sans-serif;
 }
 
-/* Navbar */
-.nav-link {
-  transition: color 0.3s ease;
-}
-
-.nav-underline .nav-link.active,
-.nav-underline .nav-link:hover {
-  color: #58a4b0 !important;
-}
-
-.navbar {
-  backdrop-filter: blur(10px);
-  background-color: rgba(33, 37, 41, 0.9) !important;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-/* Footer */
-.Footer_color {
-  background-color: #093C5D;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  color: white;
-}
-
-/*main*/
 main {
   flex: 1;
 }
 
-/* Hero Section */
-.hero-bg {
-  background: radial-gradient(circle at 10% 20%, rgba(9, 60, 93, 0.1) 0%, rgba(13, 17, 23, 1) 90%);
-  border-bottom: 1px solid rgba(88, 164, 176, 0.05);
+/* Títulos Hero */
+.display-4 {
+  letter-spacing: -1px;
 }
 
-/* Efeito na foto de perfil */
-.profile-blob {
-  width: fit-content;
-  padding: 10px;
-  background: linear-gradient(45deg, #093c5d, #58a4b0);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  /* Forma orgânica moderna */
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-  transition: 0.5s ease;
+/* Títulos Globais de Secção */
+.separators {
+  font-weight: 700;
+  color: #58a4b0;
+  text-transform: uppercase;
+  display: inline-block;
+  margin-bottom: 20px;
 }
 
-.profile-blob:hover {
-  border-radius: 50%;
-  transform: rotate(2deg);
+/* ==========================================================================
+   2. CONFIGURAÇÃO INTEGRAL DO MODO CLARO (LIGHT MODE) - ATUALIZADO
+   ========================================================================== */
+[data-bs-theme="light"] {
+  background-color: #f4f6f9 !important;
 }
 
-/*Habilidades*/
-#habilidades i {
-  color: #58a4b0 !important;
-  margin-bottom: 15px;
+[data-bs-theme="light"] body {
+  background-color: #f4f6f9 !important;
+  color: #212529 !important;
+}
+
+[data-bs-theme="light"] .separators {
+  color: #093C5D !important;
+}
+
+[data-bs-theme="light"] .cards_bg,
+[data-bs-theme="light"] .card-educacao,
+[data-bs-theme="light"] #habilidades .p-3 {
+  background-color: #ffffff !important;
+  border: 1px solid #dee2e6 !important;
+  color: #212529 !important;
+}
+
+[data-bs-theme="light"] .cards_bg h5,
+[data-bs-theme="light"] .cards_bg h6,
+[data-bs-theme="light"] .cards_bg .card-title {
+  color: #121212 !important;
+}
+
+[data-bs-theme="light"] .cards_bg p,
+[data-bs-theme="light"] .cards_bg .card-text,
+[data-bs-theme="light"] .cards_bg p.small {
+  color: #495057 !important;
+  opacity: 0.9 !important;
+}
+
+[data-bs-theme="light"] .btn-social {
+  background-color: #eaeaea !important;
+  border-color: #cccccc !important;
+  color: #333333 !important;
+}
+
+[data-bs-theme="light"] .btn-social:hover {
+  color: #ffffff !important;
+}
+
+/* CORREÇÃO NA NAVBAR: Fundo claro com links escuros para legibilidade */
+[data-bs-theme="light"] .navbar {
+  background-color: rgba(255, 255, 255, 0.95) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+[data-bs-theme="light"] .navbar-brand,
+[data-bs-theme="light"] .nav-link {
+  color: #212529 !important;
+}
+
+/* CORREÇÃO NO FOOTER: Inverte as cores do Rodapé no Modo Claro */
+[data-bs-theme="light"] .Footer_color {
+  background-color: #e9ecef !important;
+  border-top: 1px solid #dee2e6;
+  color: #212529 !important;
+}
+
+[data-bs-theme="light"] .Footer_color .opacity-75 {
+  color: #495057 !important;
+  opacity: 1 !important;
+}
+
+[data-bs-theme="light"] .hero-bg {
+  background: radial-gradient(circle at 10% 20%, rgba(88, 164, 176, 0.08) 0%, #f4f6f9 90%) !important;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05) !important;
+}
+
+[data-bs-theme="light"] .hero-desc {
+  color: #2b303a !important;
+}
+
+[data-bs-theme="light"] .btn-outline-info {
+  color: #093c5d !important;
+  border-color: #58a4b0 !important;
+}
+
+[data-bs-theme="light"] .btn-outline-info:hover {
+  color: #ffffff !important;
+  background-color: #58a4b0 !important;
+}
+
+[data-bs-theme="light"] .btn_color {
+  background-color: #093c5d !important;
+  color: #ffffff !important;
+  border: 2px solid #093c5d !important;
+}
+
+[data-bs-theme="light"] .btn_color:hover {
+  background-color: #58a4b0 !important;
+  border-color: #58a4b0 !important;
 }
 
 
-/*Estilo dos Cards */
+/* ==========================================================================
+   5. COMPONENTE DE CARDS (PROJETOS, EDUCAÇÃO, HABILIDADES)
+   ========================================================================== */
 .cards_bg,
 .card-educacao,
 #habilidades .p-3 {
   background-color: #093c5d !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  /* Azul escuro padrão */
+  border: 1px solid rgba(255, 255, 255, 0.05) !important;
   border-radius: 15px !important;
+  max-height: 450px;
   transition: all 0.3s ease-in-out;
 }
 
+/* Efeito Hover unificado para elevação dos cartões */
 .cards_bg:hover,
 .card-educacao:hover,
 #habilidades .p-3:hover {
-  transform: translateY(-8px);
+  transform: translateY(-10px);
   border-color: #58a4b0 !important;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
 }
 
-.cards_bg:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-}
-
-/* Ajuste para as imagens dos logos dentro dos cards */
+/* Alinhamento de imagens/logos dentro de cartões */
 .card-img-top {
   padding: 25px;
   max-height: 120px;
+  width: auto;
+  max-width: 90%;
   object-fit: contain;
 }
 
-/* Card educação */
 .card-educacao {
-  background-color: #093c5d !important;
   max-width: 500px;
-  border-radius: 10px;
 }
 
 .card-educacao img {
@@ -119,39 +180,46 @@ main {
   object-fit: contain;
 }
 
-
-/* Ajuste aos logos dos projetos */
 .card span.align-middle {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Garante que a imagem se ajusta sem distorcer */
-.card-img-top {
-  max-height: 200 px;
-  width: auto;
-  max-width: 90%;
-  object-fit: contain;
+/* Força os títulos internos a manterem a mesma altura para alinhar a grelha */
+.card-title {
+  min-height: 55px;
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  color: #58a4b0;
+  font-weight: 600;
 }
 
-.cards_bg {
-  max-height: 450px;
-  transition: all 0.3s ease-in-out;
-  border: 1px solid rgba(255, 255, 255, 0.05) !important;
+/* Limitação inteligente de texto a 5 linhas com reticências (...) */
+.card-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  flex-grow: 1;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
 }
 
-.cards_bg:hover {
-  transform: translateY(-10px);
-  border-color: #58a4b0 !important;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+#habilidades i {
+  color: #58a4b0 !important;
+  margin-bottom: 15px;
 }
 
-/* Botões Personalizados */
+/* ==========================================================================
+   6. BOTÕES E ELEMENTOS INTERATIVOS
+   ========================================================================== */
 .btn_color {
   background-color: #0d4a75;
   color: white !important;
-  border: 2px white !important;
+  border: 2px solid white !important;
   padding: 10px 20px;
   transition: 0.3s;
 }
@@ -161,24 +229,20 @@ main {
   color: white !important;
 }
 
-/* Estilo base para os botões de redes sociais */
+/* Botões de Redes Sociais Premium (64px Círculos Perfeitos) */
 .btn-social {
   background-color: #1b232d !important;
+  border: 1px solid #343a40 !important;
   border-radius: 50% !important;
-  padding: 0px !important;
-
-   font-size: 1.5rem; 
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
+  font-size: 1.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
   width: 64px;
   height: 64px;
   padding: 0 !important;
+  transition: all 0.2s ease-in-out;
 }
 
 .btn-social:hover {
@@ -190,67 +254,19 @@ main {
 .btn-behance:hover {
   background-color: #0057ff !important;
   border-color: #0057ff !important;
-  transform: translateY(-3px);
 }
 
 .btn-linkedin:hover {
   background-color: #0077b5 !important;
   border-color: #0077b5 !important;
-  transform: translateY(-3px);
 }
 
 .btn-github:hover {
   background-color: #333 !important;
   border-color: #555 !important;
-  transform: translateY(-3px);
 }
 
-
-/* Títulos e Separadores */
-.separators {
-  font-weight: 700;
-  color: #58a4b0;
-  text-transform: uppercase;
-  display: inline-block;
-  margin-bottom: 20px;
-}
-
-/* Títulos Hero */
-.display-4 {
-  letter-spacing: -1px;
-}
-
-/* Alinha os Títulos */
-.card-title {
-  min-height: 55px;
-  display: flex;
-  align-items: center;
-  margin-top: 10px;
-  color: #58a4b0;
-  font-weight: 600;
-}
-
-/* Alinha e limita o Texto */
-.card-text {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  /* Corta em 5 linhas com "..." */
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-
-  flex-grow: 1;
-  line-height: 1.5;
-  margin-bottom: 20px;
-  font-size: 0.95rem;
-}
-
-/* Imagens */
-.profile_me {
-  border-radius: 15px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-  max-width: 280px;
-}
-
+/* Banners das páginas internas de detalhes */
 .banner-container {
   width: 100%;
   height: 250px;
@@ -266,7 +282,7 @@ main {
   filter: brightness(0.7);
 }
 
-/* Efeito de zoom suave nas imagens de preview */
+/* Previews de Imagens com Efeito Hover Ampliado */
 .preview-image {
   max-height: 500px;
   object-fit: contain;
@@ -283,15 +299,15 @@ main {
   cursor: pointer;
 }
 
-/* badges  */
+/* Componentes Auxiliares */
 .badge {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
 
-
-
-/* Animações*/
+/* ==========================================================================
+   7. ANIMAÇÕES DE ENTRADA (FADE IN UP)
+   ========================================================================== */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -304,23 +320,27 @@ main {
   }
 }
 
-/* animação de entrada*/
 .animar-entrada {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* delay para parecer mais invidual */
+/* Efeito Cascata sequencial nos cartões de projetos/habilidades */
 .delay-1 {
   animation-delay: 0.2s;
-  opacity: 0;
+  animation-fill-mode: both !important;
 }
 
 .delay-2 {
   animation-delay: 0.4s;
-  opacity: 0;
+  animation-fill-mode: both !important;
 }
 
 .delay-3 {
   animation-delay: 0.6s;
-  opacity: 0;
+  animation-fill-mode: both !important;
+}
+
+.delay-4 {
+  animation-delay: 0.8s;
+  animation-fill-mode: both !important;
 }
