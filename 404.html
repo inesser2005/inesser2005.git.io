@@ -44,11 +44,17 @@
 
 <body>
   <main>
-  <!-- ERROR 404 -->
-    <div class="container">
+    <!-- ERROR 404 -->
+    <div class="d-flex justify-content-center container">
       <div class="row align-items-center p-3">
+
         <h1>ERROR 404</h1>
-        <img src="/Images/404/loading.gif" alt="loading">
+
+        <div class="d-flex align-items-center">
+          <strong role="status">Loading...</strong>
+          <div class="spinner-border ms-auto" aria-hidden="true"></div>
+        </div>
+        
         <p data-pt="Volte para a página inicial, a página que está a tenar aceder não existe"
           data-en="Go back to the site, the page you are looking for doesn't exist"> Volte para a página inicial, a
           página
@@ -58,6 +64,7 @@
           <i class="bi bi-code-slash me-2"></i>
           <span data-pt="Voltar para o site" data-en="Go back to website">Voltar para o site</span>
         </a>
+
       </div>
     </div>
 
