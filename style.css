@@ -1,6 +1,10 @@
 /* ==========================================================================
    1. TIPOGRAFIA & CONFIGURAÇÕES GERAIS
    ========================================================================== */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Signika", sans-serif;
   font-weight: 300;
@@ -12,10 +16,6 @@ body {
   min-height: 100vh;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 .signika_letra {
   font-family: "Signika", sans-serif;
 }
@@ -24,9 +24,8 @@ main {
   flex: 1;
 }
 
-/*Navbar issue*/
-/* Remove o contorno padrão do Bootstrap ao focar no botão */
-/* Container das linhas do menu */
+/*Navbar */
+
 .menu-hamburguer-custom {
   width: 24px;
   height: 18px;
@@ -37,17 +36,15 @@ main {
   cursor: pointer;
 }
 
-/* Estilo comum para as 3 linhas */
 .menu-hamburguer-custom span {
   display: block;
   width: 100%;
   height: 2px;
   background-color: currentColor;
-  /* Usa a cor do texto atual da sua Navbar */
   border-radius: 2px;
   transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
   transform-origin: left center;
-  /* Garante que a rotação comece no ponto certo */
+
 }
 
 /* --- ANIMAÇÕES AO CLICAR (Menu Aberto) --- */
@@ -75,12 +72,18 @@ main {
   box-shadow: none !important;
 }
 
+/* ==========================================================================
+   ! intro
+   ========================================================================== */
+
 /* Títulos Hero */
 .display-4 {
   letter-spacing: -1px;
 }
 
 .profile_me {
+  height: auto;
+  width: 100px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 15px;
 }
@@ -112,7 +115,7 @@ main {
 }
 
 /* ==========================================================================
-   ! CONFIGURAÇÃO INTEGRAL DO MODO CLARO (LIGHT MODE) - ATUALIZADO
+   ! CONFIGURAÇÃO DO MODO CLARO (LIGHT MODE) 
    ========================================================================== */
 [data-bs-theme="light"] {
   background-color: #f4f6f9 !important;
@@ -414,7 +417,7 @@ main {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Efeito Cascata sequencial nos cartões de projetos/habilidades */
+/* Efeito Cascata nos cartões de projetos/habilidades */
 .delay-1 {
   animation-delay: 0.2s;
   animation-fill-mode: both !important;
