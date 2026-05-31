@@ -1,0 +1,21 @@
+{
+  "name": "Inês Sérgio | Portefólio",
+  "short_name": "Inês Sérgio",
+  "icons": [
+    {
+      "src": "/https://inesser2005.github.io/inesser2005.git.io/Images/Projetos_Logos/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/https://inesser2005.github.io/inesser2005.git.io/Images/Projetos_Logos/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "theme_color": "#ffffff",
+  "background_color": "#ffffff",
+  "display": "standalone"
+}
